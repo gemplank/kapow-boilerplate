@@ -8,7 +8,7 @@
 plugins=true
 salts=true
 options=true
-testdata=true
+testdata=false
 precommit=true
 
 # Begin set-up.
