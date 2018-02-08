@@ -36,7 +36,7 @@ then
 
 	# Install the database tables and configure WordPress.
 	echo "Adding core database tables..."
-	wp core install --url=my-project.dev --title="My Project" --admin_user=admin --admin_password=password --admin_email=hello@my-project.com --allow-root --path=build/wordpress
+	wp core install --url=my-project.local --title="My Project" --admin_user=admin --admin_password=password --admin_email=hello@my-project.com --allow-root --path=build/wordpress
 
 	# Remove/Install/Activate Plugins.
 	if [ "$plugins" = true ]
