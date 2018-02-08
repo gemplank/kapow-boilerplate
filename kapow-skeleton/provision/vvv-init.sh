@@ -131,7 +131,13 @@ then
 	fi
 fi
 
+# NPM / Bower / Composer
+# -------------------------------------
+echo "Installing dependencies..."
+npm install && bower install && composer install
+echo "Dependencies installed."
+
 # The Vagrant site setup script will
 # restart Nginx for us.
 # -------------------------------------
-echo "My Project site now installed";
+echo "My Project site has been provisioned and is ready to rock!";
