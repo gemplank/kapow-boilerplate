@@ -57,8 +57,8 @@
 	</rule>
 
 	<!-- Add in some extra rules from other standards. -->
-	<!-- 	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/> -->
-	<!-- 	<rule ref="Generic.Commenting.Todo"/> -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
 
 	<!-- Include the WordPress Extra (Core + Extras) ruleset, with exclusions. -->
 	<rule ref="WordPress-Extra">
@@ -109,14 +109,14 @@
 	<!-- Ensure that all globals have a project specific or Kapow prefix -->
 <!-- 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="stark_industries,kapow" />
+			<property name="prefixes" type="array" value="my_project,kapow" />
 		</properties>
 	</rule> -->
 
 	<!-- Ensure that we're not using any parameters deprecated three major versions ago -->
-<!-- 	<rule ref="WordPress.WP.DeprecatedParameters">
+	<rule ref="WordPress.WP.DeprecatedParameters">
 		<properties>
-			<property name="minimum_supported_version" value="4.5" />
+			<property name="minimum_supported_version" value="4.6" />
 		</properties>
-	</rule> -->
+	</rule>
 </ruleset>
