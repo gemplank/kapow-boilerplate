@@ -62,6 +62,7 @@ build/*
 !build/.htaccess
 
 # WP Content
+build/wp-content/debug.log
 build/wp-content/advanced-cache.php
 build/wp-content/backup-db/
 build/wp-content/backups/
