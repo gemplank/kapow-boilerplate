@@ -1,4 +1,4 @@
-**Please prefix the issue title with `Epic:` or `Sub:` if appropriate, and apply the label of the same name. Also, assigned the issue the `Triage` project and any appropriate milestone or labels.**
+**Please prefix the issue title with `Epic:` or `Sub:` if appropriate, and apply the label of the same name. Also, assign the issue to the `Triage` project and add any appropriate milestones or labels.**
 
 ## Introduction:
 
