@@ -19,8 +19,8 @@ PR to be raised against `feature/#-` (delete if Epic).
 ## Acceptance Criteria:
 
 ### Generic (delete as appropriate)
-- [ ] Renders in IE11+
-- [ ] Passes WCAG AA
+- [ ] Renders in Modern Browsers (inc IE11)
+- [ ] Passes WCAG 2.0 AA
 - [ ] Mobile First (SCSS is Mobile first)
 - [ ] HTML is semantic (uses HTML5 elements)
 - [ ] Works without JavaScript
