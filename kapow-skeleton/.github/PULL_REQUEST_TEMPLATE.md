@@ -6,6 +6,10 @@
 
 Replace this text with a brief description of the work carried out in this Pull Request.
 
-## Notes / Guidance
+## Testing / Merge / Deployment notes
 
-- ...
+- N/A
+
+## Screenshots / Videos
+
+- N/A
