@@ -1,12 +1,8 @@
 {
 	"version": 3,
 	"file": "login.css",
-	"sourceRoot": "assets/css",
 	"sources": [
 		"../scss/login.scss"
-	],
-	"sourcesContent": [
-		"// Styles and imports used for the WordPress login screen.\n// -----------------------------------------------------------------------------\n"
 	],
 	"names": [],
 	"mappings": ""

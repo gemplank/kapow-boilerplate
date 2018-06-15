@@ -1,13 +1,1 @@
-{
-	"version": 3,
-	"file": "rtl.css",
-	"sourceRoot": "assets/css",
-	"sources": [
-		"../scss/rtl.scss"
-	],
-	"sourcesContent": [
-		"// Right to Left (RTL) styles.\n// -----------------------------------------------------------------------------\n\n/*\nTheme Name: My Project\n\nAdding support for language written in a Right To Left (RTL) direction is easy -\nit's just a matter of overwriting all the horizontal positioning attributes\nof your CSS stylesheet in a separate stylesheet file named rtl.css.\n\nhttp://codex.wordpress.org/Right_to_Left_Language_Support\n\n*/\n\n/*\n\nbody {\n  direction: rtl;\n  unicode-bidi: embed;\n}\n\n*/\n"
-	],
-	"names": [],
-	"mappings": "AAGA;;;;;;;;;EASE;AAEF;;;;;;;EAOE"
-}
+{"version":3,"sources":["../scss/rtl.scss"],"names":[],"mappings":"AAGA;;;;;;;;;EASE;AAEF;;;;;;;EAOE","file":"rtl.css"}
