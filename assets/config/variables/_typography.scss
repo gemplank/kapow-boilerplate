@@ -1,0 +1,116 @@
+// Font Stacks.
+// -------------------------------------
+
+/// Font Stack - Monospaced.
+/// @type String
+/// @group typography
+$kp-font-stack--monospaced: Consolas, "Courier New", Monaco "Lucida Console", monospace !default;
+
+/// Font Stack - Serif.
+/// @type String
+/// @group typography
+$kp-font-stack--serif: Georgia, Times, "Times New Roman", serif !default;
+
+/// Font Stack - Sans Serif.
+/// @type String
+/// @group typography
+$kp-font-stack--sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Font Sizes.
+// -------------------------------------
+
+/// Font Size - Copy Extra Large.
+/// @type Length
+/// @group typography
+$kp-font-size--xlarge: 20px !default;
+
+/// Font Size - Copy Large.
+/// @type Length
+/// @group typography
+$kp-font-size--large: 18px !default;
+
+/// Font Size - Copy Medium.
+/// @type Length
+/// @group typography
+$kp-font-size--medium: 16px !default;
+
+/// Font Size - Copy Small.
+/// @type Length
+/// @group typography
+$kp-font-size--small: 14px !default;
+
+/// Font Size - Copy Extra Small.
+/// @type Length
+/// @group typography
+$kp-font-size--xsmall: 12px !default;
+
+/// Font Size - Heading 1.
+/// @type Length
+/// @group typography
+$kp-font-size--h1: 36px !default;
+
+/// Font Size - Heading 2.
+/// @type Length
+/// @group typography
+$kp-font-size--h2: 32px !default;
+
+/// Font Size - Heading 3.
+/// @type Length
+/// @group typography
+$kp-font-size--h3: 28px !default;
+
+/// Font Size - Heading 4.
+/// @type Length
+/// @group typography
+$kp-font-size--h4: 26px !default;
+
+/// Font Size - Heading 5.
+/// @type Length
+/// @group typography
+$kp-font-size--h5: 24px !default;
+
+/// Font Size - Heading 6.
+/// @type Length
+/// @group typography
+$kp-font-size--h6: 22px !default;
+
+// Font Weights.
+// -------------------------------------
+
+/// Font Weight - Bold.
+/// @type Number
+/// @group typography
+$kp-font-weight--bold: 700 !default;
+
+/// Font Weight - Semi Bold.
+/// @type Number
+/// @group typography
+$kp-font-weight--semibold: 600 !default;
+
+/// Font Weight - Normal.
+/// @type Number
+/// @group typography
+$kp-font-weight--normal: 400 !default;
+
+/// Font Weight - Light.
+/// @type Number
+/// @group typography
+$kp-font-weight--light: 300 !default;
+
+// Line Heights.
+// -------------------------------------
+
+/// Line Height - Large.
+/// @type Length
+/// @group typography
+$kp-line-height--large: 1.75em !default;
+
+/// Line Height - Medium.
+/// @type Length
+/// @group typography
+$kp-line-height--medium: 1.5em !default;
+
+/// Line Height - Small.
+/// @type Length
+/// @group typography
+$kp-line-height--small: 1.25em !default;

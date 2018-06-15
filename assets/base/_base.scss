@@ -1,0 +1,17 @@
+// Miscellaneous base styles e.g. box-sizing, psuedos, site container etc.
+// -----------------------------------------------------------------------------
+
+@import 'reset/reset';
+@import 'reset/print';
+@import 'reset/wordpress';
+
+// Outer-most container.
+// -------------------------------------
+.site {
+	margin: 0 auto;
+	max-width: kp-rem($kp-base--container-width);
+}
+
+.site-container {
+	@include site-wrap(normal);
+}

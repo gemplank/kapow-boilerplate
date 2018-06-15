@@ -1,0 +1,30 @@
+// Global hacks, polyfills and workarounds for legacy browsers.
+// -----------------------------------------------------------------------------
+
+// Apple iOS webkit browsers.
+// -------------------------------------
+
+
+// Internet Explorer browsers.
+// -------------------------------------
+
+.lt-ie8 {
+	// Border box polyfill for all elements.
+	// -------------------------------------
+	*,
+	*:before,
+	*:after {
+		*behavior: url(/polyfills/boxsizing.htc);
+	}
+}
+
+.lt-ie9 {
+	// Padding for Foundation grid columns.
+	// -------------------------------------
+	@if $kp-framework == "foundation" {
+		.columns {
+			padding-left: kp-rem(strip-unit($grid-column-gutter) * strip-unit($kp-base--font-size) / 2);
+			padding-right: kp-rem(strip-unit($grid-column-gutter) * strip-unit($kp-base--font-size) / 2);
+		}
+	}
+}

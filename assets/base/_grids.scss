@@ -1,0 +1,101 @@
+// Custom grid styles.
+// -----------------------------------------------------------------------------
+
+// Merge the breakpoints & tweakpoints
+// so we can iterate through all of
+// them in one go.
+// ------------------------------------
+$points: map-merge($kp-breakpoints, $kp-tweakpoints);
+
+// Bourbon Neat Grid.
+// ------------------------------------
+// Grid classes for Bourbon + Neat that
+// use the variables and media queries
+// that have been defined in Kapow!
+// ------------------------------------
+@if $kp-framework == "bourbon" {
+    .row {
+        @include grid-container();
+        margin: 0 auto;
+        max-width: kp-rem($kp-base--row-width);
+        position: relative;
+
+        $i: 1;
+        @each $b, $value in $points {
+            @include kp-mq($b) {
+                @while $i <= $kp-base--columns {
+                    // Generate the (un)collapse classes.
+                    // ------------------------------------
+                    &.collapse-#{$b} > .col {
+                        float: left;
+                        margin-left: 0;
+                        width: (100 / $i) + '%';
+                    }
+                    &.uncollapse-#{$b} > .col {
+                        @include grid-column($i);
+                    }
+                    $i: $i + 1;
+                }
+            }
+            $i: 1;
+        }
+
+        &.full {
+            max-width: 100%;
+        }
+
+        .row {
+            @include grid-collapse();
+        }
+    }
+
+    .col {
+        @include grid-column($kp-base--columns);
+        position: relative;
+        $i: 1;
+        // ------------------------------------
+        // Loop through the Kapow! breakpoints
+        // as defined in _vars-default.scss and
+        // generate the grid column classes as
+        // well as other utility classes to
+        // mimick Foundation behaviours.
+        // ------------------------------------
+        @each $b, $value in $points {
+            @include kp-mq($b) {
+                @while $i <= $kp-base--columns {
+                    // Generate the main column class.
+                    // ------------------------------------
+                    &.#{$b}#{$i} {
+                        @include grid-column($i);
+                    }
+                    // Generate the push/pull classes.
+                    // ------------------------------------
+                    &.push-#{$b}#{$i} {
+                        @include grid-push($i);
+                    }
+                    &.pull-#{$b}#{$i} {
+                        @include grid-push(-$i);
+                    }
+                    // Generate the shift classes.
+                    // ------------------------------------
+                    &.shift-left-#{$b}#{$i} {
+                        @include grid-shift(-$i);
+                    }
+                    &.shift-right-#{$b}#{$i} {
+                        @include grid-shift($i);
+                    }
+                    // Generate the centering classes.
+                    // ------------------------------------
+                    &.centered-#{$b} {
+                        clear: both;
+                        float: none;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    $i: $i + 1;
+                }
+            }
+            $i: 1;
+        }
+    }
+}

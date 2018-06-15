@@ -1,0 +1,48 @@
+// Temporary hacks to be moved into relevant partials at a later date.
+// -----------------------------------------------------------------------------
+.example-row {
+	@include columns;
+	justify-content: center;
+}
+
+.example-content {
+	height: 100px;
+	background-color: black;
+	&.alt {
+		background-color: #ededed;
+	}
+}
+
+// Mobile
+.example-column {
+	width: 50%;
+}
+.example-column-double {
+	width: 100%;
+}
+
+// Desktop
+@media screen and (min-width: 500px) {
+	.example-column {
+		width: 20%;
+	}
+	.example-column-double {
+		width: 40%;
+	}
+}
+
+.example-panel-dark {
+	background-color: black;
+}
+
+.example-panel-offwhite {
+	background-color: #ededed;
+}
+
+.example-panel-image {
+	background-image: url('https://picsum.photos/1200/400/?random');
+}
+
+.example-panel-image-dark {
+	background-image: url('https://picsum.photos/1000/400/?random');
+}
