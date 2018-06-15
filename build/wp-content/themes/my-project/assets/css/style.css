@@ -386,16 +386,6 @@ th {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-::-moz-selection {
-  background: #f00;
-  color: #fff;
-  text-shadow: none; }
-
-::selection {
-  background: #f00;
-  color: #fff;
-  text-shadow: none; }
-
 a:active, a:hover {
   outline: 0; }
 
@@ -431,7 +421,7 @@ strong {
   font-weight: 700; }
 
 body {
-  background-color: #fff;
+  background-color: white;
   text-rendering: optimizeLegibility; }
 
 body,
@@ -439,7 +429,7 @@ button,
 input,
 select,
 textarea {
-  color: #333;
+  color: grey;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -502,7 +492,7 @@ form {
 
 hr {
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid lightgrey;
   display: block;
   height: 1px;
   margin: 24px 0;
@@ -553,7 +543,7 @@ select {
   *:before,
   *:after {
     background: transparent !important;
-    color: #111 !important;
+    color: black !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
     text-shadow: none !important; }
@@ -569,7 +559,7 @@ select {
     content: ""; }
   pre,
   blockquote {
-    border: 1px solid #111;
+    border: 1px solid black;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
@@ -640,9 +630,9 @@ select {
   word-wrap: break-word; }
 
 .edit-link {
-  background-color: #f00;
+  background-color: red;
   bottom: 0;
-  color: #fff;
+  color: white;
   display: block;
   font-weight: 700;
   left: 0;
@@ -655,14 +645,14 @@ select {
   transition: background-color ease-in-out 0.3s;
   z-index: 9999; }
   .edit-link:hover, .edit-link:active, .edit-link:focus {
-    background-color: #080;
-    color: #fff; }
+    background-color: green;
+    color: white; }
 
 .post-edit-link {
-  color: #fff;
+  color: white;
   text-decoration: none; }
   .post-edit-link:hover, .post-edit-link:active, .post-edit-link:focus {
-    color: #fff; }
+    color: white; }
 
 .gallery {
   margin-bottom: 24px;
@@ -887,7 +877,7 @@ select {
   *:before,
   *:after {
     background: transparent !important;
-    color: #111 !important;
+    color: black !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
     text-shadow: none !important; }
@@ -903,7 +893,7 @@ select {
     content: ""; }
   pre,
   blockquote {
-    border: 1px solid #111;
+    border: 1px solid black;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
@@ -926,16 +916,6 @@ select {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-::-moz-selection {
-  background: #f00;
-  color: #fff;
-  text-shadow: none; }
-
-::selection {
-  background: #f00;
-  color: #fff;
-  text-shadow: none; }
 
 a:active, a:hover {
   outline: 0; }
@@ -972,7 +952,7 @@ strong {
   font-weight: 700; }
 
 body {
-  background-color: #fff;
+  background-color: white;
   text-rendering: optimizeLegibility; }
 
 body,
@@ -980,7 +960,7 @@ button,
 input,
 select,
 textarea {
-  color: #333;
+  color: grey;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -1043,7 +1023,7 @@ form {
 
 hr {
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid lightgrey;
   display: block;
   height: 1px;
   margin: 24px 0;
@@ -1142,9 +1122,9 @@ select {
   word-wrap: break-word; }
 
 .edit-link {
-  background-color: #f00;
+  background-color: red;
   bottom: 0;
-  color: #fff;
+  color: white;
   display: block;
   font-weight: 700;
   left: 0;
@@ -1157,14 +1137,14 @@ select {
   transition: background-color ease-in-out 0.3s;
   z-index: 9999; }
   .edit-link:hover, .edit-link:active, .edit-link:focus {
-    background-color: #080;
-    color: #fff; }
+    background-color: green;
+    color: white; }
 
 .post-edit-link {
-  color: #fff;
+  color: white;
   text-decoration: none; }
   .post-edit-link:hover, .post-edit-link:active, .post-edit-link:focus {
-    color: #fff; }
+    color: white; }
 
 .gallery {
   margin-bottom: 24px;
@@ -1218,7 +1198,7 @@ select {
 
 blockquote {
   background-color: none;
-  border-left-color: #111;
+  border-left-color: none;
   border-left-style: solid;
   border-left-width: 4px;
   margin: 24px;
@@ -1246,10 +1226,10 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #fff;
+  background-color: white;
   border-radius: 0;
-  border: 1px solid #eee;
-  color: #333;
+  border: 1px solid lightgrey;
+  color: grey;
   padding: 8px;
   padding: 0.5rem;
   -webkit-transition: all ease-in-out 0.3s;
@@ -1262,40 +1242,40 @@ textarea {
   [type="search"]:focus,
   [type="url"]:focus,
   textarea:focus {
-    background-color: #fff;
-    border-color: #f00;
-    color: #f00; }
+    background-color: white;
+    border-color: red;
+    color: red; }
 
 select {
-  border: 1px solid #eee;
-  color: #333;
+  border: 1px solid lightgrey;
+  color: grey;
   padding: 8px;
   padding: 0.5rem; }
 
 input::-webkit-input-placeholder {
-  color: #333;
+  color: grey;
   opacity: 1; }
 
 input:focus::-webkit-input-placeholder {
   color: transparent; }
 
 input:-ms-input-placeholder {
-  color: #333;
+  color: grey;
   opacity: 1; }
 
 input:focus:-ms-input-placeholder {
   color: transparent; }
 
 input::-webkit-input-placeholder {
-  color: #333;
+  color: grey;
   opacity: 1; }
 
 input:-ms-input-placeholder {
-  color: #333;
+  color: grey;
   opacity: 1; }
 
 input::placeholder {
-  color: #333;
+  color: grey;
   opacity: 1; }
 
 input:focus::-webkit-input-placeholder {
@@ -1311,23 +1291,23 @@ textarea {
   height: 150px;
   height: 9.375rem; }
   textarea::-webkit-input-placeholder {
-    color: #333;
+    color: grey;
     opacity: 1; }
   textarea:focus::-webkit-input-placeholder {
     color: transparent; }
   textarea:-ms-input-placeholder {
-    color: #333;
+    color: grey;
     opacity: 1; }
   textarea:focus:-ms-input-placeholder {
     color: transparent; }
   textarea::-webkit-input-placeholder {
-    color: #333;
+    color: grey;
     opacity: 1; }
   textarea:-ms-input-placeholder {
-    color: #333;
+    color: grey;
     opacity: 1; }
   textarea::placeholder {
-    color: #333;
+    color: grey;
     opacity: 1; }
   textarea:focus::-webkit-input-placeholder {
     color: transparent; }
@@ -1342,8 +1322,8 @@ textarea {
   border: 0;
   margin: 0;
   padding: 0;
-  background-color: #f00;
-  color: #fff;
+  background-color: red;
+  color: white;
   padding: 8px;
   padding: 0.5rem; }
   [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus,
@@ -1445,7 +1425,7 @@ table {
   width: 100%; }
 
 a {
-  color: #f00; }
+  color: red; }
   a:hover, a:active, a:focus {
     color: #990000; }
 
@@ -1541,13 +1521,13 @@ ol {
     margin-top: 0.75rem; }
 
 pre {
-  background-color: #111;
+  background-color: black;
   margin: 24px;
   margin: 1.5rem;
   overflow: auto;
   padding: 24px;
   padding: 1.5rem;
-  color: #fff; }
+  color: white; }
 
 .lt-ie8 *,
 .lt-ie8 *:before,
