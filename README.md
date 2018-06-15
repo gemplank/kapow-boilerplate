@@ -15,7 +15,7 @@ Kapow! empowers you to quickly get up and running with bespoke WordPress site de
 - WordPress configuration files
 - Vagrant configuration files
 
-On it's own, the Skeleton isn't all that useful unless you've already got your own Sass, build tool and theme components to drop into the project. Thankfully, the Skeleton is designed to work with the other members of the Kapow! family: 
+On it's own, the Skeleton isn't all that useful unless you've already got your own Sass, build tool and theme components to drop into the project. Thankfully, the Skeleton is designed to work with the other members of the Kapow! family:
 
 - [Sass](https://github.com/mkdo/kapow-sass)
 - [Grunt](https://github.com/mkdo/kapow-grunt)
@@ -54,9 +54,6 @@ You will need the following installed on your system before attempting to set-up
 - **my-project** = "slug" name, theme directory slug and theme textdomain
 - **My Project** = "proper" name
 - **my_project** = database name & function name prefix
-- **Author Name** = your or your organisation's name
-- **hello@<span></span>my-project.com** = your email address
-- **http://www&#8203;.&#8203;my-project.com** = your company website
 
 **4)** Open `gruntfile.js` and configure your Grunt settings accordingly including adding any additional bower/custom dependencies for concatenation, paths to plugins to be linted etc. You shouldn't need to alter the `siteInfo` and `wpInfo` settings objects if you're happy with Kapow!'s default structure.
 
