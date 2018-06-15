@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "editor.css",
+	"sourceRoot": "assets/css",
+	"sources": [
+		"../scss/editor.scss"
+	],
+	"sourcesContent": [
+		"// Styles and imports used for elements found within the WordPress editor.\n// -----------------------------------------------------------------------------\n"
+	],
+	"names": [],
+	"mappings": ""
+}

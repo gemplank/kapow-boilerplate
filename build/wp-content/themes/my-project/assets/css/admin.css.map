@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "admin.css",
+	"sourceRoot": "assets/css",
+	"sources": [
+		"../scss/admin.scss"
+	],
+	"sourcesContent": [
+		"// Styles and imports for the WordPress admin area.\n// -----------------------------------------------------------------------------\n"
+	],
+	"names": [],
+	"mappings": ""
+}
