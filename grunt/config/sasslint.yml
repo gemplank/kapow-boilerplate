@@ -1,0 +1,18 @@
+# We only want the really important issues,
+# so let's ignore some formatting errors.
+options:
+  merge-default-rules: false
+rules:
+  class-name-format: 0
+  final-newline: 0
+  function-name-format: 0
+  id-name-format: 0
+  indentation: 0
+  mixin-name-format: 0
+  no-css-comments: 0
+  no-empty-rulesets: 0
+  placeholder-name-format: 0
+  property-sort-order: 0
+  quotes: 0
+  single-line-per-selector: 0
+  variable-name-format: 0
