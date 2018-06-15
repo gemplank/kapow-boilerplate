@@ -1,88 +1,45 @@
-// Colours - Specific.
-// -------------------------------------
-
-/// Colour - Black.
-/// @type Color
-/// @group colour
-$kp-colour--black: #111 !default;
-
-/// Colour - Amber.
-/// @type Color
-/// @group colour
-$kp-colour--amber: #ffc200 !default;
-
-/// Colour - Green.
-/// @type Color
-/// @group colour
-$kp-colour--green: #080 !default;
-
-/// Colour - Grey.
-/// @type Color
-/// @group colour
-$kp-colour--grey: #333 !default;
-
-/// Colour - Grey Light.
-/// @type Color
-/// @group colour
-$kp-colour--grey-light: #eee !default;
-
-/// Colour - Purple.
-/// @type Color
-/// @group colour
-$kp-colour--purple: #800080 !default;
-
-/// Colour - Red.
-/// @type Color
-/// @group colour
-$kp-colour--red: #f00 !default;
-
-/// Colour - White.
-/// @type Color
-/// @group colour
-$kp-colour--white: #fff !default;
-
-// Colours - Abstract.
+// Colours.
 // -------------------------------------
 
 /// Branding - Primary.
 /// @type Color
 /// @group colour
-$kp-colour-branding--primary: $kp-colour--red !default;
+$kp-colour-branding--primary: red !default;
 
 /// Branding - Secondary.
 /// @type Color
 /// @group colour
-$kp-colour-branding--secondary: $kp-colour--black !default;
+$kp-colour-branding--secondary: black !default;
 
 /// Branding - Tertiary.
 /// @type Color
 /// @group colour
-$kp-colour-branding--tertiary: $kp-colour--white !default;
+$kp-colour-branding--tertiary: white !default;
 
 /// Branding - Quaternary.
 /// @type Color
 /// @group colour
-$kp-colour-branding--quaternary: $kp-colour--white !default;
+$kp-colour-branding--quaternary: white !default;
 
 /// Body - Background.
 /// @type Color
 /// @group colour
-$kp-colour-body--background: $kp-colour--white !default;
+$kp-colour-body--background: white !default;
 
 /// Content - Copy.
 /// @type Color
 /// @group colour
-$kp-colour-content--copy: $kp-colour--grey !default;
+$kp-colour-content--copy: grey !default;
 
 /// Content - Heading.
 /// @type Color
 /// @group colour
-$kp-colour-content--heading: $kp-colour--black !default;
+$kp-colour-content--heading: black !default;
 
 /// Content - Link.
 /// @type Color
 /// @group colour
-$kp-colour-content--link: $kp-colour--red !default;
+$kp-colour-content--link: red !default;
 
 /// Content - Link Hover.
 /// @type Color
@@ -92,57 +49,57 @@ $kp-colour-content--link-hover: darken($kp-colour-content--link, 20%) !default;
 /// Content - Link Visited.
 /// @type Color
 /// @group colour
-$kp-colour-content--link-visited: $kp-colour--purple !default;
+$kp-colour-content--link-visited: purple !default;
 
 /// Content - <pre> Foreground.
 /// @type Color
 /// @group colour
-$kp-colour-content--pre: $kp-colour--white !default;
+$kp-colour-content--pre: white !default;
 
 /// Content - <pre> Background.
 /// @type Color
 /// @group colour
-$kp-colour-content--pre-bg: $kp-colour--black !default;
+$kp-colour-content--pre-bg: black !default;
 
 /// Form - Input Text.
 /// @type Color
 /// @group colour
-$kp-colour-form--input: $kp-colour--grey !default;
+$kp-colour-form--input: grey !default;
 
 /// Form - Input Background.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-bg: $kp-colour--white !default;
+$kp-colour-form--input-bg: white !default;
 
 /// Form - Input Border.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-border: $kp-colour--grey-light !default;
+$kp-colour-form--input-border: lightgrey !default;
 
 /// Form - Input Focus Text.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-focus: $kp-colour--red !default;
+$kp-colour-form--input-focus: red !default;
 
 /// Form - Input Focus Border.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-focus-border: $kp-colour--red !default;
+$kp-colour-form--input-focus-border: red !default;
 
 /// Form - Input Focus Background.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-focus-bg: $kp-colour--white !default;
+$kp-colour-form--input-focus-bg: white !default;
 
 /// Form - Input Submit Text.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-submit: $kp-colour--white !default;
+$kp-colour-form--input-submit: white !default;
 
 /// Form - Input Submit Background.
 /// @type Color
 /// @group colour
-$kp-colour-form--input-submit-bg: $kp-colour--red !default;
+$kp-colour-form--input-submit-bg: red !default;
 
 /// Form - Input Submit Hover Background.
 /// @type Color

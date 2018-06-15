@@ -9,17 +9,17 @@
 
 // Selection highlighting.
 // -------------------------------------
-::-moz-selection {
-	background: $kp-colour-branding--primary;
-	color: $kp-colour--white;
-	text-shadow: none;
-}
-
-::selection {
-	background: $kp-colour-branding--primary;
-	color: $kp-colour--white;
-	text-shadow: none;
-}
+// ::-moz-selection {
+// 	background: $kp-colour-branding--primary;
+// 	color: white;
+// 	text-shadow: none;
+// }
+//
+// ::selection {
+// 	background: $kp-colour-branding--primary;
+// 	color: white;
+// 	text-shadow: none;
+// }
 
 // Global element styles to be applied throughout the site without context.
 // -----------------------------------------------------------------------------
@@ -148,7 +148,7 @@ form {
 hr {
 	// Make the HR look better by default.
 	border: 0;
-	border-top: 1px solid $kp-colour--grey-light;
+	border-top: 1px solid lightgrey;
 	display: block;
 	height: 1px;
 	margin: kp-rem($kp-base--spacing-common) 0;

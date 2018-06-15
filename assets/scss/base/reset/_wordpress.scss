@@ -68,9 +68,9 @@
 // the bottom left hand corner.
 // ------------------------------------
 .edit-link {
-	background-color: $kp-colour--red;
+	background-color: red;
 	bottom: 0;
-	color: $kp-colour--white;
+	color: white;
 	display: block;
 	font-weight: $kp-font-weight--bold;
 	left: 0;
@@ -82,17 +82,17 @@
 	z-index: 9999;
 
 	@include kp-on-event {
-		background-color: $kp-colour--green;
-		color: $kp-colour--white;
+		background-color: green;
+		color: white;
 	}
 }
 
 .post-edit-link {
-	color: $kp-colour--white;
+	color: white;
 	text-decoration: none;
 
 	@include kp-on-event {
-		color: $kp-colour--white;
+		color: white;
 	}
 }
 

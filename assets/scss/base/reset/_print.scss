@@ -8,7 +8,7 @@
 	*:before,
 	*:after {
 		background: transparent !important;
-		color: $kp-colour--black !important;
+		color: black !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 	}
@@ -36,7 +36,7 @@
 
 	pre,
 	blockquote {
-		border: 1px solid $kp-colour--black;
+		border: 1px solid black;
 		page-break-inside: avoid;
 	}
 	// Printing Tables:
