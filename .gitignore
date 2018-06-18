@@ -88,7 +88,7 @@ build/wp-content/themes/twentysixteen/
 build/wp-content/themes/twentyseventeen/
 
 # Themes - Custom
-build/wp-content/themes/mantis-energy/assets/css/
-build/wp-content/themes/mantis-energy/assets/js/
-build/wp-content/themes/mantis-energy/style.css
-build/wp-content/themes/mantis-energy/style.css.map
+build/wp-content/themes/my-project/assets/css/
+build/wp-content/themes/my-project/assets/js/
+build/wp-content/themes/my-project/style.css
+build/wp-content/themes/my-project/style.css.map
