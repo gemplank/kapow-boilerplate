@@ -93,18 +93,18 @@ Text Domain: my-project
 // Make yourself a nice hot cup of tea/coffee and bask in your magnificence!
 // -----------------------------------------------------------------------------
 
-// 0. Choose a framework!
+// Choose a framework!
 // -------------------------------------
 $kp-framework: noframework !default;
 
-// 1. Config.
+// Config.
 // -------------------------------------
 @import "config/variables";
 @import "config/functions";
 @import "config/mixins";
 @import "config/settings";
 
-// 2. Reset.
+// Reset.
 // -------------------------------------
 // The full path to the Normalize import
 // is required to prevent
@@ -120,7 +120,7 @@ $kp-framework: noframework !default;
 // -------------------------------------
 @import "normalize-scss/_normalize.scss";
 
-// 3. Framework.
+// Framework.
 // -------------------------------------
 // You MUST uncomment the relevant line
 // below for the Sass for your chosen
@@ -143,55 +143,22 @@ $kp-framework: noframework !default;
 // - templates
 // -------------------------------------
 
-// 4. Vendors
+// Vendors
 // -------------------------------------
 @import "glob/_vendorMap.scss";
-// @import "vendor/vendor-name";
 
-// 5. Base.
+// Project Sass.
 // -------------------------------------
 @import "glob/_baseMap.scss";
-// @import "base/base";
-// @import "base/elements";
-// @import "base/font-face";
-// @import "base/grids";
-// @import "base/helpers";
-// @import "base/iconography";
-// @import "base/print";
-// @import "base/sprites";
-// @import "base/typography";
-
-// 6. Modules.
-// -------------------------------------
-@import "glob/_modulesMap.scss";
-// @import "modules/footer";
-// @import "modules/header";
-// @import "modules/main";
-// @import "modules/sidebar";
-// @import "modules/the-content";
-
-// 7. Components.
-// -------------------------------------
 @import "glob/_componentsMap.scss";
-// @import "components/buttons";
-// @import "components/carousels";
-// @import "components/embeds";
-// @import "components/forms";
-// @import "components/modals";
-// @import "components/navigation";
-// @import "components/sections";
-// @import "components/tables";
-// @import "components/widgets";
-
-// 8. Templates.
-// -------------------------------------
+@import "glob/_modulesMap.scss";
+@import "glob/_structuressMap.scss";
 @import "glob/_templatesMap.scss";
-// @import "templates/home";
 
-// 9. Global legacy fixes.
+// Global legacy fixes.
 // -------------------------------------
 @import "legacy";
 
-// 10. Hacks (to be refactored).
+// Hacks (to be refactored).
 // -------------------------------------
 @import "hacks";

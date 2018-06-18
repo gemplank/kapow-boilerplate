@@ -15,6 +15,8 @@ module.exports = {
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/components/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_modulesMap.scss':
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/modules/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_structuresMap.scss':
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/structures/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_templatesMap.scss':
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/templates/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_vendorMap.scss':
