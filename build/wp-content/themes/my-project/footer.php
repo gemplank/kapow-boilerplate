@@ -16,6 +16,7 @@
 
 	<footer class="site-footer" role="contentinfo">
 
+		<div class="site-footer__wrap">
 		<?php do_action( 'kapow_before_footer_content' ); ?>
 
 		<div class="site-info">
@@ -29,6 +30,7 @@
 	</footer>
 
 	<?php do_action( 'kapow_after_footer' ); ?>
+	</div>
 
 </div>
 

@@ -49,12 +49,13 @@ $chrome_colour = get_theme_mod( 'kapow_mobile_chrome_colour' );
 <a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content' , 'my-project' ); ?></a>
 <a class="skip-link sr-only" href="#site-navigation"><?php esc_html_e( 'Skip to navigation' , 'my-project' ); ?></a>
 
-<div class="hfeed site">
+<div class="hfeed site-container">
 
 	<?php do_action( 'kapow_before_header' ); ?>
 
 	<header class="site-header" role="banner">
 
+		<div class="site-header__wrap">
 		<?php do_action( 'kapow_before_header_content' ); ?>
 
 		<div class="site-identity">
@@ -123,6 +124,7 @@ $chrome_colour = get_theme_mod( 'kapow_mobile_chrome_colour' );
 		</nav>
 
 		<?php do_action( 'kapow_after_header_content' ); ?>
+		</div>
 
 	</header>
 

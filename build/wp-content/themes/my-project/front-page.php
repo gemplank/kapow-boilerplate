@@ -13,19 +13,22 @@ get_header(); ?>
 
 	<main class="site-main">
 
-		<?php do_action( 'kapow_before_main_content' );
+		<div class="template-front-page">
 
-		while ( have_posts() ) {
+			<?php do_action( 'kapow_before_main_content' );
 
-			the_post();
+			while ( have_posts() ) {
 
-			get_template_part( 'template-parts/content', 'page-front' );
-		}
+				the_post();
 
-		do_action( 'kapow_after_main_content' ); ?>
+				get_template_part( 'template-parts/content', 'page-front' );
+			}
+
+			do_action( 'kapow_after_main_content' ); ?>
+
+		</div>
 
 	</main>
 
 <?php
-get_sidebar();
 get_footer();
