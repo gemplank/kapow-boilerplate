@@ -205,5 +205,5 @@ msgid "My Project"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Author Name <hello@my-project.com>"
+msgid "Make Do <hello@makedo.net>"
 msgstr ""

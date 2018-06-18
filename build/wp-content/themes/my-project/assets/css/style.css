@@ -1,6 +1,6 @@
 /*!
 Theme Name: My Project
-Author: Author Name <hello@my-project.com>
+Author: Make Do <hello@makedo.net>
 Author URI: http://www.makedo.net
 Version: 1.0
 License: GNU General Public License v3 or later
@@ -703,11 +703,6 @@ select {
 
 .sticky {
   display: block; }
-
-.site {
-  margin: 0 auto;
-  max-width: 1440px;
-  max-width: 90rem; }
 
 .site-container {
   *zoom: 1;
