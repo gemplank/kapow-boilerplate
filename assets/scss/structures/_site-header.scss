@@ -1,2 +1,10 @@
 // Global header region layout/styles.
 // -----------------------------------------------------------------------------
+.site-header {
+	position: relative;
+	z-index: 200;
+
+	.site-header__wrap {
+		@include site-wrap(normal);
+	}
+}

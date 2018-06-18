@@ -1,4 +1,4 @@
-# Git Ignore for DBTH Intranet.
+# Git Ignore for My Project.
 # -----------------------------------------------------------------------------
 
 # Kapow! setup script.
@@ -15,12 +15,14 @@ build/**/.git
 build/**/.gitignore
 build/**/.gitmodules
 
-# Assets.
+# Assets & Grunt files - Stop accidental commits
 # -------------------------------------
 assets/css/*
 assets/glob/
 assets/scss/base/_sprites.scss
 assets/js/lib/modernizr-custom.js
+assets/scss/glob/*
+assets/js/*.tmp.js
 !assets/css/.gitkeep
 
 # Composer.
@@ -86,7 +88,7 @@ build/wp-content/themes/twentysixteen/
 build/wp-content/themes/twentyseventeen/
 
 # Themes - Custom
-build/wp-content/themes/dbth-intranet/assets/css/
-build/wp-content/themes/dbth-intranet/assets/js/
-build/wp-content/themes/dbth-intranet/style.css
-build/wp-content/themes/dbth-intranet/style.css.map
+build/wp-content/themes/mantis-energy/assets/css/
+build/wp-content/themes/mantis-energy/assets/js/
+build/wp-content/themes/mantis-energy/style.css
+build/wp-content/themes/mantis-energy/style.css.map
