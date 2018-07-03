@@ -1,14 +1,5 @@
-// Make all elements inherit box-sizing
-// from the root <html> element.
-// -------------------------------------
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
 // Global element styles to be applied throughout the site without context.
-// -----------------------------------------------------------------------------
+
 a {
 	// Intentionally left out :focus to due WCAG.
 	&:active,
@@ -53,11 +44,6 @@ b,
 dt,
 strong {
 	font-weight: $kp-font-weight--bold;
-}
-
-body {
-	background-color: $kp-colour-body--background;
-	text-rendering: optimizeLegibility;
 }
 
 body,
@@ -139,13 +125,6 @@ hr {
 	height: 1px;
 	margin: kp-rem($kp-base--spacing-common) 0;
 	padding: 0;
-}
-
-html {
-	// Everything inherits from <html>.
-	box-sizing: border-box;
-	font-size: kp-rem($kp-base--font-size);
-	text-rendering: optimizeLegibility;
 }
 
 img {
