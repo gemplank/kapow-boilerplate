@@ -1,2 +1,5 @@
 // Homepage specific layout/styles.
 // -----------------------------------------------------------------------------
+.template-front-page {
+	@include site-wrap(normal);
+}
