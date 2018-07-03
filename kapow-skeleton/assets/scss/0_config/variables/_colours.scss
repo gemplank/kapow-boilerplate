@@ -2,7 +2,6 @@
 // -------------------------------------
 $my-project--primary:					#2cc795;
 $my-project--dark:						#4C4846;
-$my-project--grey:						#454452;
 $my-project--offwhite:					#DAD8D9;
 $my-project--white:						#ffffff;
 
@@ -10,7 +9,7 @@ $my-project--white:						#ffffff;
 // -------------------------------------
 $kp-colour-body--background:			$my-project--white !default;
 
-$kp-colour-content--copy:				$my-project--grey !default;
+$kp-colour-content--copy:				$my-project--dark !default;
 $kp-colour-content--heading:			$my-project--dark !default;
 $kp-colour-content--link:				$my-project--primary !default;
 $kp-colour-content--link-hover:			darken($kp-colour-content--link, 20%) !default;
@@ -18,7 +17,7 @@ $kp-colour-content--link-visited:		$my-project--primary !default;
 $kp-colour-content--pre:				$my-project--white !default;
 $kp-colour-content--pre-bg:				$my-project--dark !default;
 
-$kp-colour-form--input:					$my-project--grey !default;
+$kp-colour-form--input:					$my-project--dark !default;
 $kp-colour-form--input-bg:				$my-project--white !default;
 $kp-colour-form--input-border:			$my-project--offwhite !default;
 $kp-colour-form--input-focus:			$my-project--primary !default;
