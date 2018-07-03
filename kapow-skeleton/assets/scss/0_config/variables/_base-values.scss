@@ -1,32 +1,20 @@
 // Base Values.
 // -------------------------------------
 
-/// Base - Font Size in pixels.
-/// @type Length
-/// @group base
+// Base - Font Size in pixels.
 $kp-base--font-size: 16px !default;
 
-/// Base - Number of Grid Columns.
-/// @type Number
-/// @group base
+// Base - Number of Grid Columns.
 $kp-base--columns: 12 !default;
 
-/// Base - Gutter Width in pixels.
-/// @type Length
-/// @group base
+// Base - Gutter Width in pixels.
 $kp-base--gutter-width: 20px !default;
 
-/// Base - Container Width in pixels.
-/// @type Length
-/// @group base
+// Base - Container Width in pixels.
 $kp-base--container-width: 1440px !default;
 
-/// Base - Row Width in pixels.
-/// @type Length
-/// @group base
+// Base - Row Width in pixels.
 $kp-base--row-width: 1280px !default;
 
-/// Base - Common spacing in pixels.
-/// @type Length
-/// @group base
+// Base - Common spacing in pixels.
 $kp-base--spacing-common: 24px;

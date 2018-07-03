@@ -1,47 +1,29 @@
 // Blockquotes.
 // -------------------------------------
 
-/// Blockquote - Background Colour.
-/// @type Color
-/// @group elements
+// Blockquote - Background Colour.
 $kp-blockquote-bg-colour: none !default;
 
-/// Blockquote - Border Colour.
-/// @type Color
-/// @group elements
+// Blockquote - Border Colour.
 $kp-blockquote--border-colour: none !default;
 
-/// Blockquote - Border Style.
-/// @type String
-/// @group elements
+// Blockquote - Border Style.
 $kp-blockquote--border-style: solid !default;
 
-/// Blockquote - Border Width.
-/// @type Number
-/// @group elements
+// Blockquote - Border Width.
 $kp-blockquote--border-width: 4px !default;
 
-/// Blockquote - Quotes.
-/// @type Bool
-/// @group elements
+// Blockquote - Quotes.
 $kp-blockquote--quotes: true;
 
 // Forms.
 // -------------------------------------
 
-/// Forms - Border.
-/// @type String
-/// @group elements
+// Forms - Border.
 $kp-form--border: 1px solid $kp-colour-form--input-border;
 
-/// Forms - Placeholder Styles.
-/// @type List
-/// @group elements
-/// @see {mixin} kp-placeholder-styles
+// Forms - Placeholder Styles.
 $kp-ph--styles: (color: $kp-colour-form--input, opacity: 1) !default;
 
-/// Forms - Placeholder Prefixes.
-/// @type List
-/// @group elements
-/// @see {mixin} kp-placeholder-styles
+// Forms - Placeholder Prefixes.
 $kp-ph--prefixes: "::-webkit-input-placeholder", "::-moz-placeholder", ":-ms-input-placeholder", "::placeholder" !default;

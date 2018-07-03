@@ -18,121 +18,73 @@
 // of a breakpoint e.g. sm, md etc.
 // --------------------------------------------------------------------------
 
-/// Mobile navigation breakpoint
-/// @type String
-/// @group responsive
+// Mobile navigation breakpoint
 $kp-mobile-nav-breakpoint: sm;
 
-/// Breakpoint - Extra Extra Small.
-/// @type Length
-/// @group responsive
+// Breakpoint - Extra Extra Small.
 $kp-bp--xxs: 320px;
 
-/// Media Query - Extra Extra Small (Min).
-/// @type String
-/// @group responsive
+// Media Query - Extra Extra Small (Min).
 $kp-mq--xxs-min: (min-width: $kp-bp--xxs);
 
-/// Media Query - Extra Extra Small (Max).
-/// @type String
-/// @group responsive
+// Media Query - Extra Extra Small (Max).
 $kp-mq--xxs-max: (max-width: $kp-bp--xxs - 1);
 
-/// Breakpoint - Extra Small.
-/// @type Length
-/// @group responsive
+// Breakpoint - Extra Small.
 $kp-bp--xs: 480px;
 
-/// Media Query - Extra Small (Min).
-/// @type String
-/// @group responsive
+// Media Query - Extra Small (Min).
 $kp-mq--xs-min: (min-width: $kp-bp--xs);
 
-/// Media Query - Extra Small (Max).
-/// @type String
-/// @group responsive
+// Media Query - Extra Small (Max).
 $kp-mq--xs-max: (max-width: $kp-bp--xs - 1);
 
-/// Breakpoint - Small.
-/// @type Length
-/// @group responsive
+// Breakpoint - Small.
 $kp-bp--sm: 768px;
 
-/// Media Query - Small (Min).
-/// @type String
-/// @group responsive
+// Media Query - Small (Min).
 $kp-mq--sm-min: (min-width: $kp-bp--sm);
 
-/// Media Query - Small (Max).
-/// @type String
-/// @group responsive
+// Media Query - Small (Max).
 $kp-mq--sm-max: (max-width: $kp-bp--sm - 1);
 
-/// Breakpoint - Medium.
-/// @type Length
-/// @group responsive
+// Breakpoint - Medium.
 $kp-bp--md: 1024px;
 
-/// Media Query - Medium (Min).
-/// @type String
-/// @group responsive
+// Media Query - Medium (Min).
 $kp-mq--md-min: (min-width: $kp-bp--md);
 
-/// Media Query - Medium (Max).
-/// @type String
-/// @group responsive
+// Media Query - Medium (Max).
 $kp-mq--md-max: (max-width: $kp-bp--md - 1);
 
-/// Breakpoint - Large.
-/// @type Length
-/// @group responsive
+// Breakpoint - Large.
 $kp-bp--lg: 1280px;
 
-/// Media Query - Large (Min).
-/// @type String
-/// @group responsive
+// Media Query - Large (Min).
 $kp-mq--lg-min: (min-width: $kp-bp--lg);
 
-/// Media Query - Large (Max).
-/// @type String
-/// @group responsive
+// Media Query - Large (Max).
 $kp-mq--lg-max: (max-width: $kp-bp--lg - 1);
 
-/// Breakpoint - Extra Large.
-/// @type Length
-/// @group responsive
+// Breakpoint - Extra Large.
 $kp-bp--xl: 1440px;
 
-/// Media Query - Extra Large (Min).
-/// @type String
-/// @group responsive
+// Media Query - Extra Large (Min).
 $kp-mq--xl-min: (min-width: $kp-bp--xl);
 
-/// Media Query - Extra Large (Max).
-/// @type String
-/// @group responsive
+// Media Query - Extra Large (Max).
 $kp-mq--xl-max: (max-width: $kp-bp--xl - 1);
 
-/// Breakpoint - Extra Extra Large.
-/// @type Length
-/// @group responsive
+// Breakpoint - Extra Extra Large.
 $kp-bp--xxl: 1600px;
 
-/// Media Query - Extra Extra Large (Min).
-/// @type String
-/// @group responsive
+// Media Query - Extra Extra Large (Min).
 $kp-mq--xxl-min: (min-width: $kp-bp--xxl);
 
-/// Media Query - Extra Extra Large (Max).
-/// @type String
-/// @group responsive
+// Media Query - Extra Extra Large (Max).
 $kp-mq--xxl-max: (max-width: $kp-bp--xxl - 1);
 
-/// Breakpoints Map.
-/// @group responsive
-/// @prop {String} name - Breakpoint name
-/// @prop {Map} query - Breakpoint query
-/// @see {mixin} kp-mq
+// Breakpoints Map.
 $kp-breakpoints: ("xxs": $kp-mq--xxs-min, "xxs-max": $kp-mq--xxs-max, "xs": $kp-mq--xs-min, "xs-max": $kp-mq--xs-max, "sm": $kp-mq--sm-min, "sm-max": $kp-mq--sm-max, "md": $kp-mq--md-min, "md-max": $kp-mq--md-max, "lg": $kp-mq--lg-min, "lg-max": $kp-mq--lg-max, "xl": $kp-mq--xl-min, "xl-max": $kp-mq--xl-max, "xxl": $kp-mq--xxl-min, "xxl-max": $kp-mq--xxl-max) !default;
 
 // Custom Tweakpoints & Media Queries
@@ -145,24 +97,14 @@ $kp-breakpoints: ("xxs": $kp-mq--xxs-min, "xxs-max": $kp-mq--xxs-max, "xs": $kp-
 // `kp-mq` mixin in your Sass e.g. `@include kp-mq(example) {`.
 // --------------------------------------------------------------------------
 
-/// Tweakpoint - Example.
-/// @type Length
-/// @group responsive
+// Tweakpoint - Example.
 $kp-tp--example: 380px;
 
-/// Media Query - Example (Min).
-/// @type String
-/// @group responsive
+// Media Query - Example (Min).
 $kp-mq--example-min: (min-width: $kp-tp--example);
 
-/// Media Query - Example (Max).
-/// @type String
-/// @group responsive
+// Media Query - Example (Max).
 $kp-mq--example-max: (max-width: $kp-tp--example - 1);
 
-/// Tweakpoints map.
-/// @group responsive
-/// @prop {String} name - Tweakpoint name
-/// @prop {Map} query - Tweakpoint query
-/// @see {mixin} kp-mq
+// Tweakpoints map.
 $kp-tweakpoints: ("example": $kp-mq--example-min, "example-max": $kp-mq--example-max) !default;
