@@ -58,13 +58,11 @@ module.exports = {
 			'!<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_grunticon-loader_h.js'
 		],
 		tasks: [
-			// 'eslint',
 			'modernizr',
 			'concat',
 			'babel',
 			'uglify',
 			'clean',
-			// 'jsdoc',
 			'notify:scripts'
 		]
 	},
@@ -77,19 +75,12 @@ module.exports = {
 			'!<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/*.scss',
 		],
 		tasks: [
-			// 'sasslint',
-			"spritesmith",
-			"grunticon",
-			"copy:grunticon",
 			"sass-globbing",
 			"sass",
 			"postcss",
 			"cssmin",
 			"copy:unminified_css",
-			// 'legacy-browsers',
-			'copy:sourcemaps',
-			'clean',
-			// 'sassdoc',
+			"copy:sourcemaps",
 			'notify:styles'
 		]
 	}

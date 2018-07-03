@@ -3,13 +3,18 @@
 // ----------------------------------------------------------------------------
 module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [
+		// Sync
 		"sync",
+
+		// Sass
 		"sass-globbing",
 		"sass",
 		"postcss",
 		"cssmin",
 		"copy:unminified_css",
 		"copy:sourcemaps",
+
+		// JS
 		"modernizr",
 		"concat",
 		"babel",
@@ -19,5 +24,6 @@ module.exports = function( grunt ) {
 		"newer:imagemin",
 		"clean",
 		"notify:build"
+
 	] );
 };
