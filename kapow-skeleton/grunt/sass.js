@@ -6,7 +6,7 @@ module.exports = {
 	scss: {
 		options: {
 			includePaths: [
-				'bower_components/',
+				'node_modules/@bower_components/',
 			],
 			sourceMap: true,
 			style: 'compressed'

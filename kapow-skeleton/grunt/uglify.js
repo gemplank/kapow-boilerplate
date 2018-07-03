@@ -13,7 +13,7 @@ module.exports = {
 		// Generate a sourcemap for each
 		// Javascript file.
 		// -------------------------------------
-		sourceMap: false
+		sourceMap: true
 	},
 	// Uglify header JS.
 	// -------------------------------------

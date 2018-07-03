@@ -1,0 +1,19 @@
+{
+	"build": [
+		"default",
+		"watch"
+	],
+	"images": [
+		"imagemin",
+		"svgmin",
+		"notify:images"
+	],
+	"lint": [
+		"eslint",
+		"sasslint",
+		"notify:linting"
+	],
+	"sass-globbing": [
+		"sass_globbing"
+	]
+}
