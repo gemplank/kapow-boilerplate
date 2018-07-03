@@ -9,16 +9,16 @@ module.exports = {
 	// -------------------------------------
 	scss: {
 		files: {
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_baseMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/base/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_globalsMap.scss':
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/1_globals/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_componentsMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/components/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/2_components/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_modulesMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/modules/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/3_modules/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_structuresMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/structures/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/4_structures/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_templatesMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/templates/**/*.scss',
+			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/5_templates/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_vendorMap.scss':
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/vendor/**/*.scss',
 		},

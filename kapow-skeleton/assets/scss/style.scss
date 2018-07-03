@@ -99,10 +99,10 @@ $kp-framework: noframework !default;
 
 // Config.
 // -------------------------------------
-@import "config/variables";
-@import "config/functions";
-@import "config/mixins";
-@import "config/settings";
+@import "0_config/variables";
+@import "0_config/functions";
+@import "0_config/mixins";
+@import "0_config/settings";
 
 // Reset.
 // -------------------------------------
@@ -149,7 +149,7 @@ $kp-framework: noframework !default;
 
 // Project Sass.
 // -------------------------------------
-@import "glob/_baseMap.scss";
+@import "glob/_globalsMap.scss";
 @import "glob/_componentsMap.scss";
 @import "glob/_modulesMap.scss";
 @import "glob/_structuresMap.scss";
