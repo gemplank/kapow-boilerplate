@@ -7,20 +7,6 @@
 	box-sizing: inherit;
 }
 
-// Selection highlighting.
-// -------------------------------------
-// ::-moz-selection {
-// 	background: $kp-colour-branding--primary;
-// 	color: white;
-// 	text-shadow: none;
-// }
-//
-// ::selection {
-// 	background: $kp-colour-branding--primary;
-// 	color: white;
-// 	text-shadow: none;
-// }
-
 // Global element styles to be applied throughout the site without context.
 // -----------------------------------------------------------------------------
 a {
@@ -148,7 +134,7 @@ form {
 hr {
 	// Make the HR look better by default.
 	border: 0;
-	border-top: 1px solid lightgrey;
+	border-top: 1px solid $my-project--offwhite;
 	display: block;
 	height: 1px;
 	margin: kp-rem($kp-base--spacing-common) 0;

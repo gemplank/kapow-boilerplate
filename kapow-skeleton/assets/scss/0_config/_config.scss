@@ -6,8 +6,40 @@
 // |  .  \   /  _____  \  |  |      |  `--'  |    \    /\    /    |__|
 // |__|\__\ /__/     \__\ | _|       \______/      \__/  \__/     (__)
 // -----------------------------------------------------------------------------
+
+// Variables
+// If you want to add overrides for framework/library specific settings, you
+// should add these to `_settings.scss` in the appropriate section.
+//
+// Change the variables in the partials included below to meet your specific
+// project needs!
+
+@import "variables/base-values";
+@import "variables/media-queries";
+@import "variables/colours";
+@import "variables/typography";
+@import "variables/elements";
+
+// Functions
+// Avoid making direct changes to any of these core functions.
+
+@import "functions/colours";
+@import "functions/utilities";
+
+// Mixins
+// Avoid making direct changes to any of the core mixins.
+
+@import "mixins/utility";
+@import "mixins/background";
+@import "mixins/effects";
+@import "mixins/hide";
+@import "mixins/layout";
+@import "mixins/resets";
+@import "mixins/typography";
+@import "mixins/z-index";
+
+
 // Framework Settings.
-// -----------------------------------------------------------------------------
 // NOTE: This partial is imported *before* we import the Sass for your chosen
 // framework - so any settings you define here will override any framework
 // specific defaults, due to the nature of the plumbing involved.
@@ -26,7 +58,6 @@
 //
 // Then, come back to this file and add your additional framework setting
 // overrides and additions in the relevant section below.
-// -----------------------------------------------------------------------------
 
 // Import our 'plumbing' settings so the
 // Kapow! Sass variables override some
@@ -35,23 +66,19 @@
 //
 // Removing this @import will cause
 // problems in this build.
-// -------------------------------------
 @import "settings/plumbing";
 
 // Foundation overrides.
-// -------------------------------------
 @if $kp-framework == "foundation" {
 	// Add your own!
 }
 
 // Bourbon + Neat overrides.
-// -------------------------------------
 @if $kp-framework == "bourbon" {
 	// Add your own!
 }
 
 // Bootstrap overrides.
-// -------------------------------------
 @if $kp-framework == "bootstrap" {
 	// Add your own!
 }

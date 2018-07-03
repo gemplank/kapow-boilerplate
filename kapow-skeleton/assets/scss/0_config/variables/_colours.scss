@@ -1,27 +1,29 @@
-
-
-
+// My Project Colours.
+// -------------------------------------
+$my-project--primary:					#2cc795;
+$my-project--dark:						#4C4846;
+$my-project--grey:						#454452;
+$my-project--offwhite:					#DAD8D9;
+$my-project--white:						#ffffff;
 
 // Colours.
 // -------------------------------------
-$kp-colour-branding--primary: red !default;
-$kp-colour-branding--secondary: black !default;
-$kp-colour-branding--tertiary: white !default;
-$kp-colour-branding--quaternary: white !default;
-$kp-colour-body--background: white !default;
-$kp-colour-content--copy: grey !default;
-$kp-colour-content--heading: black !default;
-$kp-colour-content--link: red !default;
-$kp-colour-content--link-hover: darken($kp-colour-content--link, 20%) !default;
-$kp-colour-content--link-visited: purple !default;
-$kp-colour-content--pre: white !default;
-$kp-colour-content--pre-bg: black !default;
-$kp-colour-form--input: grey !default;
-$kp-colour-form--input-bg: white !default;
-$kp-colour-form--input-border: lightgrey !default;
-$kp-colour-form--input-focus: red !default;
-$kp-colour-form--input-focus-border: red !default;
-$kp-colour-form--input-focus-bg: white !default;
-$kp-colour-form--input-submit: white !default;
-$kp-colour-form--input-submit-bg: red !default;
-$kp-colour-form--input-submit-hover-bg: darken($kp-colour-form--input-submit-bg, 20%) !default;
+$kp-colour-body--background:			$my-project--white !default;
+
+$kp-colour-content--copy:				$my-project--grey !default;
+$kp-colour-content--heading:			$my-project--dark !default;
+$kp-colour-content--link:				$my-project--primary !default;
+$kp-colour-content--link-hover:			darken($kp-colour-content--link, 20%) !default;
+$kp-colour-content--link-visited:		$my-project--primary !default;
+$kp-colour-content--pre:				$my-project--white !default;
+$kp-colour-content--pre-bg:				$my-project--dark !default;
+
+$kp-colour-form--input:					$my-project--grey !default;
+$kp-colour-form--input-bg:				$my-project--white !default;
+$kp-colour-form--input-border:			$my-project--offwhite !default;
+$kp-colour-form--input-focus:			$my-project--primary !default;
+$kp-colour-form--input-focus-border:	$my-project--primary !default;
+$kp-colour-form--input-focus-bg:		$my-project--white !default;
+$kp-colour-form--input-submit:			$my-project--white !default;
+$kp-colour-form--input-submit-bg:		$my-project--primary !default;
+$kp-colour-form--input-submit-hover-bg:	darken($kp-colour-form--input-submit-bg, 20%) !default;

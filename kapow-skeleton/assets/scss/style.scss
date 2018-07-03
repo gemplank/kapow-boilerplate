@@ -99,10 +99,7 @@ $kp-framework: noframework !default;
 
 // Config.
 // -------------------------------------
-@import "0_config/variables";
-@import "0_config/functions";
-@import "0_config/mixins";
-@import "0_config/settings";
+@import "0_config/config";
 
 // Reset.
 // -------------------------------------
