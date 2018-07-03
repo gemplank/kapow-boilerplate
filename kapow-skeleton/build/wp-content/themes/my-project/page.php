@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<div class="template-page">
+
 	<main class="site-main">
 
 		<?php do_action( 'kapow_before_main_content' );
@@ -23,6 +25,9 @@ get_header(); ?>
 
 	</main>
 
+	<?php get_sidebar(); ?>
+
+</div>
+
 <?php
-get_sidebar();
 get_footer();
