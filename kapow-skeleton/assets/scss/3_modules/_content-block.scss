@@ -1,0 +1,143 @@
+.content-block {
+	max-width: $global--container-readability;
+	position: relative;
+	display: block;
+}
+
+a.content-block {
+	text-decoration: none;
+	@include kp-on-event {
+		text-decoration: none;
+	}
+}
+
+.content-block__row {
+	@include columns;
+}
+
+.content-block__image {
+	img {
+		border-radius: $global--border-radius;
+	}
+}
+
+.content-block__icon {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+
+	svg {
+		fill: currentColor;
+	}
+
+	&.icon--primary {
+		svg {
+			fill: $my-project--primary;
+		}
+
+		a.block-content__more {
+			color: $my-project--primary;
+			@include kp-on-event {
+				color: darken($my-project--primary, 5%);
+			}
+		}
+	}
+}
+
+.icon-block__icon {
+	margin-bottom: kp-rem(10px);
+	display: block;
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.content-block__content {
+	position: relative;
+}
+
+.content-block__heading {
+	@include heading('4');
+	margin: 0 0 kp-rem(10px) 0;
+
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.content-block__text {
+	opacity: 0.85;
+	margin: 0 0 kp-rem(10px) 0;
+	p {
+		margin: 0;
+	}
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.content-block__more {
+	line-height: kp-rem(16px);
+	font-size: kp-rem(16px);
+	height: kp-rem(16px);
+	display: inline-block;
+	svg {
+		transition: $global--transition;
+		vertical-align: top;
+		width: kp-rem(16px);
+		height: kp-rem(16px);
+		opacity: 0.5;
+		transform: translateX(5px);
+	}
+}
+
+a.content-block {
+	text-decoration: none;
+}
+
+a.content-block__more {
+	color: $my-project--primary;
+	text-decoration: none;
+	@include kp-on-event {
+		color: $my-project--primary;
+		text-decoration: none;
+		svg {
+			opacity: 1;
+			transform: translateX(10px);
+		}
+	}
+}
+
+
+a {
+	@include kp-on-event {
+		.content-block__more svg {
+			opacity: 1;
+			transform: translateX(10px);
+		}
+	}
+}
+
+
+.image--wide {
+	.content-block__image {
+		max-width: kp-rem(300px);
+	}
+	@include kp-mq(sm) {
+		.content-block__image {
+			width: 50%;
+		}
+		.content-block__content {
+			width: 50%;
+		}
+	}
+	@include kp-mq(lg) {
+		.content-block__image {
+			width: 50%;
+		}
+		.content-block__content {
+			width: 50%;
+		}
+	}
+}

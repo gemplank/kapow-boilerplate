@@ -6,10 +6,23 @@
 	margin-left: auto;
 	margin-right: auto;
 	max-width: kp-rem($kp-base--container-width);
-	padding-left: $kp-base--gutter-width;
-	padding-right: $kp-base--gutter-width;
 	display: block;
 	position: relative;
+
+	padding-left: $kp-base--gutter-width;
+	padding-right: $kp-base--gutter-width;
+	@include kp-mq(sm) {
+		padding-left: ($kp-base--gutter-width + 20px);
+		padding-right: ($kp-base--gutter-width + 20px);
+	}
+	@include kp-mq(md) {
+		padding-left: ($kp-base--gutter-width + 30px);
+		padding-right: ($kp-base--gutter-width + 30px);
+	}
+	@include kp-mq(lg) {
+		padding-left: ($kp-base--gutter-width + 50px);
+		padding-right: ($kp-base--gutter-width + 50px);
+	}
 
 	@if $size == normal {
 		max-width: kp-rem($kp-base--container-width);
@@ -26,12 +39,12 @@
 }
 
 // Column spacing
-@mixin columns($x : true, $y : true) {
+@mixin columns($x : true, $y : true, $size : $kp-base--gutter-width) {
 	@include kp-clearfix;
 	position: relative;
 	display: block;
-	@if $x {margin-right: - kp-rem($kp-base--gutter-width);}
-	@if $y {margin-bottom: - kp-rem($kp-base--gutter-width);}
+	@if $x {margin-right: - kp-rem($size)}
+	@if $y {margin-bottom: - kp-rem($size)}
 	@supports (display: flex) {
 		display: flex;
 		flex-flow: row wrap;
@@ -42,8 +55,8 @@
 	& > * {
 		float: left;
 		width: auto;
-		@if $x {padding-right: kp-rem($kp-base--gutter-width);}
-		@if $y {padding-bottom: kp-rem($kp-base--gutter-width);}
+		@if $x {padding-right: kp-rem($size)}
+		@if $y {padding-bottom: kp-rem($size)}
 	}
 }
 

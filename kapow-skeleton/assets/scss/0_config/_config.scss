@@ -14,6 +14,12 @@
 // Change the variables in the partials included below to meet your specific
 // project needs!
 
+
+$global--transition-duration:		0.15s;
+$global--transition:					all $global--transition-duration ease-in-out;
+$global--border-radius:				3px;
+$global--container-readability:		570px;
+
 @import "variables/base-values";
 @import "variables/media-queries";
 @import "variables/colours";

@@ -19,17 +19,28 @@ function kapow_get_icon( $slug, $width = 24, $height = 24 ) {
 	}
 
 	// Menu.
-	if ( 'menu' === $slug ) {
+	if ( 'menu-icon' === $slug ) {
 		?>
-
-		<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" viewBox="0 0 30 14.526">
+		<svg class="<?php echo esc_attr( $slug ); ?>" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
 			<title><?php esc_html_e( 'Menu Icon', 'my-project' ); ?></title>
-			<rect width="30" height="2"/>
-			<rect y="6.263" width="30" height="2"/>
-			<rect y="12.526" width="30" height="2"/>
+			<rect class="rect1" width="320" height="32"></rect>
+			<rect class="rect2" width="320" height="32"></rect>
+			<rect class="rect3" width="320" height="32"></rect>
 		</svg>
-
 		<?php
+	} elseif ( 'chevron-icon' === $slug ) {
+		?><svg  class="<?php echo esc_attr( $slug ); ?>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+		<title><?php esc_html_e( 'Chevron Icon', 'my-project' ); ?></title>
+		<polygon points="287.3,256 160,383.6 192.3,416 352,256 352,256 352,256 192.3,96 160,128.4 "/>
+		</svg><?php
+	} elseif ( 'help-icon' === $slug ) {
+		?><svg class="help-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
+		<title><?php esc_html_e( 'Help Icon', 'my-project' ); ?></title>
+		<path d="M256,48C141.1,48,48,141.1,48,256c0,114.9,93.1,208,208,208c114.9,0,208-93.1,208-208C464,141.1,370.9,48,256,48z
+		 M260.3,366c-9.4,0-17-7.5-17-16.9c0-9.3,7.6-16.8,17-16.8c9.4,0,17,7.5,17,16.8C277.3,358.5,269.7,366,260.3,366z M294.1,250.7
+		c-22.8,22.5-22.2,27.4-23.3,53.3h-19c1.1-28.5,7.5-43.7,30.1-64.5c11-10.3,19.4-22.7,19.4-38.1c0-23.6-19.4-39.9-42.6-39.9
+		c-32.4,0-48.5,16.4-47.9,46.4H192c0.3-42,24.4-62.1,67.6-62.1c33,0,60.4,20.4,60.4,54.6C320,222.3,309.3,236.6,294.1,250.7z"/>
+		</svg><?php
 	}
 }
 
@@ -107,7 +118,7 @@ function kapow_responsive_image( $img_id, $img_settings, $default_img_size = '',
 						$srcsets[] = array( $retina_img_src[0] . ' 2x',  $img_breakpoint );
 					}
 				}
-				
+
 				// Add the standard 1x image.
 				$srcsets[] = array( $img_src[0] . ' 1x', $img_breakpoint );
 			}
@@ -210,13 +221,13 @@ function kapow_responsive_bg_image_attrs( $img_id, $img_settings, $default_img_s
 				if ( ! empty( $img_url ) ) {
 					$data_attributes .= 'data-bg-' . esc_attr( $img_breakpoint ) . '="' . esc_url( $img_url ) . '" '; // Must be a space at the end!.
 				}
-				
+
 				// If retina support is enabled.
 				if ( ! empty( $retina_support ) ) {
 					// Try to get the retina image src.
 					$retina_img_src = wp_get_attachment_image_src( $img_id, $img_size . '_2x' );
 					$retina_img_url = ( ! empty( $retina_img_src ) ) ? $retina_img_src[0] : '';
-					
+
 					// Add the info to the srcset array if
 					// the retina size is available.
 					if ( ! empty( $retina_img_url ) ) {

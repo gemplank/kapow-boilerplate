@@ -4,77 +4,69 @@
 // support for dropdown menus.
 // ----------------------------------------------------------------------------
 (function() {
-    var container, button, menu, links, subMenus, i, len;
+	var links, subMenus, i, len;
+	const body = document.querySelector('body');
+	const menuToggle = document.getElementById('menu-toggle');
+	if ('undefined' === typeof menuToggle) {
+		return;
+	}
 
-    container = document.getElementById('site-navigation');
-    if (!container) {
-        return;
-    }
+	const menu = document.querySelector('.site-header__navigation');
 
-    button = document.getElementById('menu-toggle');
-    if ('undefined' === typeof button) {
-        return;
-    }
+	// Hide menuToggle if menu is empty and return early.
+	if ('undefined' === typeof menu) {
+		menuToggle.style.display = 'none';
+		return;
+	}
 
-    menu = document.getElementById('primary-menu');
+	menu.setAttribute('aria-expanded', 'false');
 
-    // Hide menu toggle button if menu is empty and return early.
-    if ('undefined' === typeof menu) {
-        button.style.display = 'none';
-        return;
-    }
+	menuToggle.addEventListener('click', function() {
+		if ( body.classList.contains('menu-open') ) {
+			body.classList.remove('menu-open');
+			menuToggle.setAttribute('aria-expanded', 'false');
+			menu.setAttribute('aria-expanded', 'false');
+		} else {
+			body.classList.add('menu-open');
+			menuToggle.setAttribute('aria-expanded', 'true');
+			menu.setAttribute('aria-expanded', 'true');
+		}
+	});
 
-    menu.setAttribute('aria-expanded', 'false');
-    if (-1 === menu.className.indexOf('primary-menu')) {
-        menu.className += ' primary-menu';
-    }
+	// Get all the link elements within the menu.
+	links = menu.getElementsByTagName('a');
+	subMenus = menu.getElementsByTagName('ul');
 
-    button.onclick = function() {
-        if (-1 !== container.className.indexOf('toggled')) {
-            container.className = container.className.replace(' toggled', '');
-            button.setAttribute('aria-expanded', 'false');
-            menu.setAttribute('aria-expanded', 'false');
-        } else {
-            container.className += ' toggled';
-            button.setAttribute('aria-expanded', 'true');
-            menu.setAttribute('aria-expanded', 'true');
-        }
-    };
+	// Set menu items with submenus to aria-haspopup="true".
+	for (i = 0, len = subMenus.length; i < len; i++) {
+		subMenus[i].parentNode.setAttribute('aria-haspopup', 'true');
+	}
 
-    // Get all the link elements within the menu.
-    links = menu.getElementsByTagName('a');
-    subMenus = menu.getElementsByTagName('ul');
+	// Each time a menu link is focused or blurred, toggle focus.
+	for (i = 0, len = links.length; i < len; i++) {
+		links[i].addEventListener('focus', toggleFocus, true);
+		links[i].addEventListener('blur', toggleFocus, true);
+	}
 
-    // Set menu items with submenus to aria-haspopup="true".
-    for (i = 0, len = subMenus.length; i < len; i++) {
-        subMenus[i].parentNode.setAttribute('aria-haspopup', 'true');
-    }
+	/**
+	 * Sets or removes .focus class on an element.
+	 */
+	function toggleFocus() {
+		var self = this;
 
-    // Each time a menu link is focused or blurred, toggle focus.
-    for (i = 0, len = links.length; i < len; i++) {
-        links[i].addEventListener('focus', toggleFocus, true);
-        links[i].addEventListener('blur', toggleFocus, true);
-    }
+		// Move up through the ancestors of the current link until we hit .nav-menu.
+		while (-1 === self.className.indexOf('nav-menu')) {
 
-    /**
-     * Sets or removes .focus class on an element.
-     */
-    function toggleFocus() {
-        var self = this;
+			// On li elements toggle the class .focus.
+			if ('li' === self.tagName.toLowerCase()) {
+				if (-1 !== self.className.indexOf('focus')) {
+					self.className = self.className.replace(' focus', '');
+				} else {
+					self.className += ' focus';
+				}
+			}
 
-        // Move up through the ancestors of the current link until we hit .nav-menu.
-        while (-1 === self.className.indexOf('nav-menu')) {
-
-            // On li elements toggle the class .focus.
-            if ('li' === self.tagName.toLowerCase()) {
-                if (-1 !== self.className.indexOf('focus')) {
-                    self.className = self.className.replace(' focus', '');
-                } else {
-                    self.className += ' focus';
-                }
-            }
-
-            self = self.parentElement;
-        }
-    }
+			self = self.parentElement;
+		}
+	}
 })();

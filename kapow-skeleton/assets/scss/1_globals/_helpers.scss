@@ -4,6 +4,18 @@
 // be defined as a mixin in config/_mixins.
 // --------------------------------------------------------------------------
 
+
+// Layout
+.row {
+	@include columns;
+}
+
+.col-half {
+	@include kp-mq(sm) {
+		width: 50%;
+	}
+}
+
 // Backgrounds
 // -------------------------------------
 .bg-img {
