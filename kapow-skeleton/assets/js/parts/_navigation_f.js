@@ -2,6 +2,8 @@
 // ----------------------------------------------------------------------------
 // Handles toggling the navigation menu for small screens and enables tab
 // support for dropdown menus.
+//
+// @TODO - Potentially refactor out of parts and into a component.
 // ----------------------------------------------------------------------------
 (function() {
 	var links, subMenus, i, len;

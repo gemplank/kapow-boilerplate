@@ -1,9 +1,4 @@
 // Miscellaneous base styles e.g. box-sizing, psuedos, site container etc.
-
-@import 'reset/reset';
-@import 'reset/print';
-@import 'reset/wordpress';
-
 *,
 *::before,
 *::after {
@@ -13,7 +8,7 @@
 html {
 	background-color: $my-project--dark;
 	box-sizing: border-box;
-	font-size: kp-rem($kp-base--font-size);
+	font-size: kp-rem($global--font-size);
 	text-rendering: optimizeLegibility;
 }
 

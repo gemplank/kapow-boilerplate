@@ -7,21 +7,21 @@
 	$global-flexbox: false;
 	// Set the base font size.
 	// -------------------------------------
-	$base-font-size: $kp-base--font-size !global;
+	$base-font-size: $global--font-size !global;
 	// Set the REM base.
 	// -------------------------------------
-	$global-font-size: $kp-base--font-size !global;
+	$global-font-size: $global--font-size !global;
 	// Sets the total number of columns in
 	// the grid.
 	// -------------------------------------
-	$grid-column-count: $kp-base--columns !global;
+	$grid-column-count: $global--columns !global;
 	// Sets the grid gutter width.
 	// -------------------------------------
-	$grid-column-gutter: kp-rem($kp-base--gutter-width) !global;
+	$grid-column-gutter: kp-rem($global--gutter-width) !global;
 	// Sets the maximum row width.
 	// -------------------------------------
-	$global-width: kp-rem($kp-base--row-width) !global;
-	$grid-row-width: kp-rem($kp-base--row-width) !global;
+	$global-width: kp-rem($global--row-width) !global;
+	$grid-row-width: kp-rem($global--row-width) !global;
 	// Set whether the last column in a row
 	// floats to the right, or not.
 	// -------------------------------------
@@ -65,8 +65,8 @@
 
 @if $kp-framework == "bourbon" {
 	$neat-grid: (
-	  columns: $kp-base--columns,
-	  gutter: $kp-base--gutter-width,
+	  columns: $global--columns,
+	  gutter: $global--gutter-width,
 	) !global;
 }
 
@@ -76,14 +76,14 @@
 @if $kp-framework == "bootstrap" {
 	// Set the base font size
 	// -------------------------------------
-	$font-size-base: $kp-base--font-size;
+	$font-size-base: $global--font-size;
 	// Sets the total number of columns in
 	// the grid.
 	// -------------------------------------
-	$grid-columns: $kp-base--columns;
+	$grid-columns: $global--columns;
 	// Sets the grid gutter width
 	// -------------------------------------
-	$grid-gutter-width: $kp-base--gutter-width;
+	$grid-gutter-width: $global--gutter-width;
 	// Override Bootstrap's breakpoints
 	// -------------------------------------
 	$screen-xs: $kp-bp--xs;
@@ -93,9 +93,9 @@
 	// Set the container widths to our own
 	// row width.
 	// -------------------------------------
-	$container-tablet: $kp-base--row-width;
-	$container-desktop: $kp-base--row-width;
-	$container-large-desktop: $kp-base--row-width;
+	$container-tablet: $global--row-width;
+	$container-desktop: $global--row-width;
+	$container-large-desktop: $global--row-width;
 	// Point at which the navbar becomes
 	// uncollapsed.
 	// -------------------------------------

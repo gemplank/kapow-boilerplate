@@ -17,13 +17,13 @@ $points: map-merge($kp-breakpoints, $kp-tweakpoints);
     .row {
         @include grid-container();
         margin: 0 auto;
-        max-width: kp-rem($kp-base--row-width);
+        max-width: kp-rem($global--row-width);
         position: relative;
 
         $i: 1;
         @each $b, $value in $points {
             @include kp-mq($b) {
-                @while $i <= $kp-base--columns {
+                @while $i <= $global--columns {
                     // Generate the (un)collapse classes.
                     // ------------------------------------
                     &.collapse-#{$b} > .col {
@@ -50,7 +50,7 @@ $points: map-merge($kp-breakpoints, $kp-tweakpoints);
     }
 
     .col {
-        @include grid-column($kp-base--columns);
+        @include grid-column($global--columns);
         position: relative;
         $i: 1;
         // ------------------------------------
@@ -62,7 +62,7 @@ $points: map-merge($kp-breakpoints, $kp-tweakpoints);
         // ------------------------------------
         @each $b, $value in $points {
             @include kp-mq($b) {
-                @while $i <= $kp-base--columns {
+                @while $i <= $global--columns {
                     // Generate the main column class.
                     // ------------------------------------
                     &.#{$b}#{$i} {

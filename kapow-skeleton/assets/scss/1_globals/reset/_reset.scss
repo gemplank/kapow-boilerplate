@@ -68,17 +68,17 @@ var {
 }
 
 dd {
-	margin: 0 0 kp-rem($kp-base--spacing-common);
+	margin: 0 0 kp-rem($global--spacing-common);
 }
 
 dl {
-	padding-left: kp-rem($kp-base--spacing-common);
+	padding-left: kp-rem($global--spacing-common);
 }
 
 dl,
 ol,
 ul {
-	margin: kp-rem($kp-base--spacing-common) 0;
+	margin: kp-rem($global--spacing-common) 0;
 }
 
 dfn,
@@ -92,7 +92,7 @@ embed,
 iframe,
 object,
 pre {
-	margin: kp-rem($kp-base--spacing-common) auto;
+	margin: kp-rem($global--spacing-common) auto;
 	// Keep the contents inside the container
 	max-width: 100%;
 }
@@ -105,7 +105,7 @@ fieldset {
 }
 
 figure {
-	margin: kp-rem($kp-base--spacing-common) 0;
+	margin: kp-rem($global--spacing-common) 0;
 }
 
 figcaption,
@@ -123,7 +123,7 @@ hr {
 	border-top: 1px solid $my-project--offwhite;
 	display: block;
 	height: 1px;
-	margin: kp-rem($kp-base--spacing-common) 0;
+	margin: kp-rem($global--spacing-common) 0;
 	padding: 0;
 }
 

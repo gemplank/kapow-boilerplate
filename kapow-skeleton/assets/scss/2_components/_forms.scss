@@ -1,6 +1,15 @@
 // Form styles.
 // --------------------------------------------------------------------------
 
+// Forms - Border.
+$kp-form--border: 1px solid $kp-colour-form--input-border;
+
+// Forms - Placeholder Styles.
+$kp-ph--styles: (color: $kp-colour-form--input, opacity: 1) !default;
+
+// Forms - Placeholder Prefixes.
+$kp-ph--prefixes: "::-webkit-input-placeholder", "::-moz-placeholder", ":-ms-input-placeholder", "::placeholder" !default;
+
 // Form fields.
 // -------------------------------------
 [type="tel"],

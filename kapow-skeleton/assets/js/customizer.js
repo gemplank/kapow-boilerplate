@@ -5,23 +5,22 @@
 // -------------------------------------
 jQuery( function( $ ) {
 
-    // Initialize Foundation JS if it has
-    // been included in the document.
-    // -------------------------------------
-    if ( window.Foundation !== undefined ) {
-        $( document ).foundation();
-    }
+	// Window Resize & Orientation Change.
+	// -------------------------------------
+	var resizeTimer;
+	$( window ).on( "resize orientationchange", function( event ) {
+
+		clearTimeout( resizeTimer );
+
+		resizeTimer = setTimeout( function() {
+			// Do stuff.
+		}, 100 );
+	});
 
 }( jQuery ));
 
 // Window Load.
 // -------------------------------------
 jQuery( window ).load( function( $ ) {
-
-}(jQuery));
-
-// Window Resize.
-// -------------------------------------
-window.addEventListener( 'resize', function() {
-
-});
+	// Do stuff.
+}( jQuery ));

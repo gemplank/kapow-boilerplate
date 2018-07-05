@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 				// -------------------------------------
 				// Image assets directory.
 				// -------------------------------------
-				img_dir: 'img',
+				img_dir: 'images',
 
 				// -------------------------------------
 				// Javascript assets directory.
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 				// -------------------------------------
 				// Icon assets directory
 				// -------------------------------------
-				icons_dir: 'icons',
+				icons_dir: 'svgs',
 
 				// -------------------------------------
 				// Documentation path relative to the

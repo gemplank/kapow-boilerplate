@@ -63,7 +63,7 @@ $header-icon-size:					40px;
 	}
 
 	@include kp-mq(#{$kp-mobile-nav-breakpoint}-max) {
-		padding-left: $kp-base--gutter-width;
+		padding-left: $global--gutter-width;
 		float: left;
 	}
 
@@ -76,7 +76,7 @@ $header-icon-size:					40px;
 	width: auto;
 	float: right;
 	@include kp-mq(#{$kp-mobile-nav-breakpoint}-max) {
-		padding-right: $kp-base--gutter-width;
+		padding-right: $global--gutter-width;
 	}
 
 	@include kp-mq($kp-mobile-nav-breakpoint) {
@@ -91,7 +91,7 @@ $header-icon-size:					40px;
 
 	@include kp-mq(#{$kp-mobile-nav-breakpoint}-max) {
 		background: $my-project--white;
-		padding: $kp-base--gutter-width;
+		padding: $global--gutter-width;
 		position: absolute;
 		top: kp-rem($header-height-mobile + ($header-pad-mobile * 2));
 		border-top: 1px solid $my-project--offwhite;
@@ -117,7 +117,7 @@ $header-icon-size:					40px;
 		> li {
 			position: relative;
 
-			margin: 0 0 kp-rem($kp-base--spacing-common);
+			margin: 0 0 kp-rem($global--spacing-common);
 
 			&:last-child {
 				margin-bottom: 0

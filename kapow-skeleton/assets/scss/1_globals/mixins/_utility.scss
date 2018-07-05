@@ -106,7 +106,7 @@
 
 @mixin kp-responsive-embed($size : 16x9) {
 	height: 0;
-	margin: kp-rem($kp-base--spacing-common) 0;
+	margin: kp-rem($global--spacing-common) 0;
 	overflow: hidden;
 
 	@if $size == 16x9 {

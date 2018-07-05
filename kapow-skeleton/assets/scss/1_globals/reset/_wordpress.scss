@@ -7,8 +7,8 @@
 .alignnone {
 	@include kp-center-block;
 	float: none;
-	margin-bottom: kp-rem($kp-base--spacing-common);
-	margin-top: kp-rem($kp-base--spacing-common);
+	margin-bottom: kp-rem($global--spacing-common);
+	margin-top: kp-rem($global--spacing-common);
 }
 
 @include kp-mq(sm) {
@@ -20,13 +20,13 @@
 		display: inline;
 		float: left;
 		margin-left: 0;
-		margin-right: kp-rem($kp-base--spacing-common);
+		margin-right: kp-rem($global--spacing-common);
 	}
 
 	.alignright {
 		display: inline;
 		float: right;
-		margin-left: kp-rem($kp-base--spacing-common);
+		margin-left: kp-rem($global--spacing-common);
 		margin-right: 0;
 	}
 
@@ -40,7 +40,7 @@
 // Captions.
 // ------------------------------------
 .wp-caption {
-	margin-bottom: kp-rem($kp-base--spacing-common);
+	margin-bottom: kp-rem($global--spacing-common);
 	max-width: 100%;
 
 	.wp-caption-text {
@@ -74,7 +74,7 @@
 	display: block;
 	font-weight: $kp-font-weight--bold;
 	left: 0;
-	padding: kp-rem($kp-base--spacing-common / 2);
+	padding: kp-rem($global--spacing-common / 2);
 	position: fixed;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -99,7 +99,7 @@
 // Gallery - fully responsive.
 // ------------------------------------
 .gallery {
-	margin-bottom: kp-rem($kp-base--spacing-common);
+	margin-bottom: kp-rem($global--spacing-common);
 }
 
 .gallery-item {
@@ -164,7 +164,7 @@
 // -------------------------------------
 .page-links {
 	clear: both;
-	margin: 0 0 kp-rem($kp-base--spacing-common);
+	margin: 0 0 kp-rem($global--spacing-common);
 }
 
 // Sticky Posts.

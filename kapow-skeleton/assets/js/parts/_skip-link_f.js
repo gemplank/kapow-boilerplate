@@ -1,7 +1,8 @@
 // Skip Link Focus Fix.
 // ----------------------------------------------------------------------------
 // Helps with accessibility for keyboard only users.
-// Learn more: https://github.com/Automattic/My Project/pull/136
+//
+// @TODO - Is this needed, or can it be merged in with other navigation JS?
 // ----------------------------------------------------------------------------
 (function() {
     var isIe = /(trident|msie)/i.test( navigator.userAgent );

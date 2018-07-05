@@ -1,9 +1,15 @@
+$kp-blockquote-bg-colour: none !default;
+$kp-blockquote--border-colour: none !default;
+$kp-blockquote--border-style: solid !default;
+$kp-blockquote--border-width: 4px !default;
+$kp-blockquote--quotes: true;
+
 blockquote {
 	background-color: $kp-blockquote-bg-colour;
 	border-left-color: $kp-blockquote--border-colour;
 	border-left-style: $kp-blockquote--border-style;
 	border-left-width: $kp-blockquote--border-width;
-	margin: kp-rem($kp-base--spacing-common);
+	margin: kp-rem($global--spacing-common);
 
 	p {
 		font-size: kp-rem($kp-font-size--large);

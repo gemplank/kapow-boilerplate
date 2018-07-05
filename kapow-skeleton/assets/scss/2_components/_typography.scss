@@ -19,7 +19,7 @@ a {
 h1,h2,h3,h4,h5,h6 {
 	@include heading;
 	clear: both;
-	margin: kp-rem($kp-base--spacing-common * 1.5) 0 kp-rem($kp-base--spacing-common);
+	margin: kp-rem($global--spacing-common * 1.5) 0 kp-rem($global--spacing-common);
 }
 h1 {@include heading(heading-1);}
 h2 {@include heading(heading-2);}
@@ -30,18 +30,18 @@ h6 {@include heading(heading-6);}
 
 // Paragraph
 p {
-	margin-bottom: kp-rem($kp-base--spacing-common);
+	margin-bottom: kp-rem($global--spacing-common);
 	font-size: kp-rem($kp-font-size--medium);
 }
 
 // Lists
 li {
 	font-size: kp-rem($kp-font-size--medium);
-	margin-bottom: kp-rem($kp-base--spacing-common / 2);
+	margin-bottom: kp-rem($global--spacing-common / 2);
 	> ol,
 	> ul {
 		margin-bottom: 0;
-		margin-left: kp-rem($kp-base--spacing-common);
+		margin-left: kp-rem($global--spacing-common);
 	}
 }
 
@@ -50,8 +50,8 @@ ul {
 
 	ol,
 	ul {
-		margin-bottom: kp-rem($kp-base--spacing-common / 2);
-		margin-top: kp-rem($kp-base--spacing-common / 2);
+		margin-bottom: kp-rem($global--spacing-common / 2);
+		margin-top: kp-rem($global--spacing-common / 2);
 	}
 }
 
@@ -60,16 +60,16 @@ ol {
 
 	ol,
 	ul {
-		margin-bottom: kp-rem($kp-base--spacing-common / 2);
-		margin-top: kp-rem($kp-base--spacing-common / 2);
+		margin-bottom: kp-rem($global--spacing-common / 2);
+		margin-top: kp-rem($global--spacing-common / 2);
 	}
 }
 
 // Pre
 pre {
 	background-color: $kp-colour-content--pre-bg;
-	margin: kp-rem($kp-base--spacing-common);
+	margin: kp-rem($global--spacing-common);
 	overflow: auto;
-	padding: kp-rem($kp-base--spacing-common);
+	padding: kp-rem($global--spacing-common);
 	color: $kp-colour-content--pre;
 }

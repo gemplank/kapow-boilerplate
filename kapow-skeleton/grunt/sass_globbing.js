@@ -9,8 +9,6 @@ module.exports = {
 	// -------------------------------------
 	scss: {
 		files: {
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_globalsMap.scss':
-			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/1_globals/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_componentsMap.scss':
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/2_components/**/*.scss',
 			'<%= siteInfo.assets_path %>/<%= siteInfo.scss_dir %>/glob/_modulesMap.scss':

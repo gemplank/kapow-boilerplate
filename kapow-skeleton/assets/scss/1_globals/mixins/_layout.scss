@@ -5,27 +5,27 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: kp-rem($kp-base--container-width);
+	max-width: kp-rem($global--container-width);
 	display: block;
 	position: relative;
 
-	padding-left: $kp-base--gutter-width;
-	padding-right: $kp-base--gutter-width;
+	padding-left: $global--gutter-width;
+	padding-right: $global--gutter-width;
 	@include kp-mq(sm) {
-		padding-left: ($kp-base--gutter-width + 20px);
-		padding-right: ($kp-base--gutter-width + 20px);
+		padding-left: ($global--gutter-width + 20px);
+		padding-right: ($global--gutter-width + 20px);
 	}
 	@include kp-mq(md) {
-		padding-left: ($kp-base--gutter-width + 30px);
-		padding-right: ($kp-base--gutter-width + 30px);
+		padding-left: ($global--gutter-width + 30px);
+		padding-right: ($global--gutter-width + 30px);
 	}
 	@include kp-mq(lg) {
-		padding-left: ($kp-base--gutter-width + 50px);
-		padding-right: ($kp-base--gutter-width + 50px);
+		padding-left: ($global--gutter-width + 50px);
+		padding-right: ($global--gutter-width + 50px);
 	}
 
 	@if $size == normal {
-		max-width: kp-rem($kp-base--container-width);
+		max-width: kp-rem($global--container-width);
 	}
 
 	@if $size == narrow {
@@ -39,7 +39,7 @@
 }
 
 // Column spacing
-@mixin columns($x : true, $y : true, $size : $kp-base--gutter-width) {
+@mixin columns($x : true, $y : true, $size : $global--gutter-width) {
 	@include kp-clearfix;
 	position: relative;
 	display: block;
