@@ -52,15 +52,6 @@ module.exports = {
 			message: '<%= siteInfo.fancy_name %> images processed!'
 		}
 	},
-	// Notify once all documentation has
-	// been generated.
-	// -------------------------------------
-	docs: {
-		options: {
-			title: 'Docs',
-			message: '<%= siteInfo.fancy_name %> docs generated!'
-		}
-	},
 	// Notify once all code has been linted.
 	// -------------------------------------
 	linting: {
@@ -69,13 +60,4 @@ module.exports = {
 			message: '<%= siteInfo.fancy_name %> files linted!'
 		}
 	},
-	// Notify once all images have been
-	// minified.
-	// -------------------------------------
-	images: {
-		options: {
-			title: 'Images',
-			message: '<%= siteInfo.fancy_name %> images minified!'
-		}
-	}
 };

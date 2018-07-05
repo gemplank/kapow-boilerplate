@@ -27,16 +27,4 @@ module.exports = {
 		dest: '<%= wpInfo.wp_content %>/<%= wpInfo.themes_dir %>/<%= wpInfo.theme_name %>/<%= wpInfo.assets_dir %>/<%= wpInfo.js_dir %>',
 		ext: '.js'
 	},
-	// Copy Grunticon JS back to assets
-	// so that it can be included in the
-	// rest of the JS stack.
-	// -------------------------------------
-	grunticon: {
-		files: [
-			{
-				src: ['<%= wpInfo.wp_content %>/<%= wpInfo.themes_dir %>/<%= wpInfo.theme_name %>/<%= wpInfo.assets_dir %>/<%= wpInfo.icons_dir %>/grunticon-loader.js'],
-				dest: '<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_grunticon-loader_h.js'
-			}
-		]
-	}
 };

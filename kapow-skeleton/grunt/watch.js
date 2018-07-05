@@ -42,7 +42,7 @@ module.exports = {
 	// Minify SVG images.
 	// -------------------------------------
 	images_svg: {
-		files: [ '<%= siteInfo.assets_path %>/<%= siteInfo.img_dir %>/**/*.svg' ],
+		files: [ '<%= siteInfo.assets_path %>/<%= siteInfo.icons_dir %>/**/*.svg' ],
 		tasks: [
 			'newer:svgmin',
 			'notify:images'
@@ -55,7 +55,6 @@ module.exports = {
 		files: [
 			'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/**/*.js',
 			'!<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_modernizr-custom_h.js',
-			'!<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_grunticon-loader_h.js'
 		],
 		tasks: [
 			'modernizr',

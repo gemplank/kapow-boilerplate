@@ -5,7 +5,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [
 		// Sync
 		"sync",
-
 		// Sass
 		"sass-globbing",
 		"sass",
@@ -13,7 +12,6 @@ module.exports = function( grunt ) {
 		"cssmin",
 		"copy:unminified_css",
 		"copy:sourcemaps",
-
 		// JS
 		"modernizr",
 		"concat",
