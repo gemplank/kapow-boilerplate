@@ -3,6 +3,11 @@
 *::before,
 *::after {
 	box-sizing: inherit;
+
+	&.lt-ie8 {
+		// Internet Explorer browsers.
+		*behavior: url(/polyfills/boxsizing.htc);
+	}
 }
 
 html {

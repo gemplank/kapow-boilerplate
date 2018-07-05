@@ -1,9 +1,8 @@
-// Global header region layout/styles.
+// Page specific layout/styles.
 // -----------------------------------------------------------------------------
-
-.site-header {
+.post {
 }
 
-.site-header__wrap {
+.template-post__wrap {
 	@include site-wrap(normal);
 }

@@ -45,7 +45,7 @@ Text Domain: my-project
 // resulting CSS output as small as possible, using only the absolute bare
 // essentials to get started with the chosen framework.
 //
-// Now you can open the relevant file located in the `config/settings/`
+// Now you can open the relevant file located in the `globals/settings/`
 // folder and un-comment the imports relevant to components/features that you
 // will need for your project:
 //
@@ -140,20 +140,12 @@ $kp-framework: noframework !default;
 // - templates
 // -------------------------------------
 
-// Vendors
-// -------------------------------------
-@import "glob/_vendorMap.scss";
-
 // Project Sass.
 // -------------------------------------
 @import "glob/_componentsMap.scss";
 @import "glob/_modulesMap.scss";
 @import "glob/_structuresMap.scss";
 @import "glob/_templatesMap.scss";
-
-// Global legacy fixes.
-// -------------------------------------
-@import "legacy";
 
 // Hacks (to be refactored).
 // -------------------------------------
