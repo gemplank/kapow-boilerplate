@@ -29,7 +29,7 @@ function kapow_enqueue_assets() {
 
 	// Header JS.
 	$header_js_url  = get_stylesheet_directory_uri() . '/assets/js/header' . $asset_suffix . '.js';
-	$header_js_path = dirname( KAPOW_ROOT ) . '/assets/js/header' . $asset_suffix . '.js';
+	$header_js_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/js/header' . $asset_suffix . '.js';
 
 	wp_enqueue_script(
 		'my-project-header-js',
@@ -41,7 +41,7 @@ function kapow_enqueue_assets() {
 
 	// Footer JS.
 	$footer_js_url  = get_stylesheet_directory_uri() . '/assets/js/footer' . $asset_suffix . '.js';
-	$footer_js_path = dirname( KAPOW_ROOT ) . '/assets/js/footer' . $asset_suffix . '.js';
+	$footer_js_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/js/footer' . $asset_suffix . '.js';
 
 	wp_enqueue_script(
 		'my-project-footer-js',
@@ -58,7 +58,7 @@ function kapow_enqueue_assets() {
 
 	// Legacy IE JS in the header.
 	$header_ie_js_url  = get_stylesheet_directory_uri() . '/assets/js/header_ie' . $asset_suffix . '.js';
-	$header_ie_js_path = dirname( KAPOW_ROOT ) . '/assets/js/header_ie' . $asset_suffix . '.js';
+	$header_ie_js_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/js/header_ie' . $asset_suffix . '.js';
 
 	wp_enqueue_script(
 		'my-project-ie-polyfills',
@@ -70,14 +70,14 @@ function kapow_enqueue_assets() {
 	wp_script_add_data( 'my-project-ie-polyfills', 'conditional', 'lt IE 9' );
 
 	// Stylesheet.
-	$kapow_style_url  = get_stylesheet_uri();
-	$kapow_style_path = dirname( KAPOW_ROOT ) . '/style.css';
+	$my_project_style_url  = get_stylesheet_uri();
+	$my_project_style_path = dirname( MY_PROJECT_THEME_ROOT ) . '/style.css';
 
 	wp_enqueue_style(
 		'my-project-style',
-		$kapow_style_url,
+		$my_project_style_url,
 		array(),
-		filemtime( $kapow_style_path )
+		filemtime( $my_project_style_path )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'kapow_enqueue_assets', 10 );
@@ -91,7 +91,7 @@ function kapow_enqueue_admin_assets() {
 
 	// Admin stylesheet.
 	$admin_style_url  = get_stylesheet_directory_uri() . '/assets/css/admin' . $asset_suffix . '.css';
-	$admin_style_path = dirname( KAPOW_ROOT ) . '/assets/css/admin' . $asset_suffix . '.css';
+	$admin_style_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/css/admin' . $asset_suffix . '.css';
 	wp_enqueue_script(
 		'my-project-admin-style',
 		$admin_style_url,
@@ -101,7 +101,7 @@ function kapow_enqueue_admin_assets() {
 
 	// Editor stylesheet.
 	$editor_css_url  = get_stylesheet_directory_uri() . '/assets/css/editor' . $asset_suffix . '.css';
-	$editor_css_path = dirname( KAPOW_ROOT ) . '/assets/css/editor' . $asset_suffix . '.css';
+	$editor_css_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/css/editor' . $asset_suffix . '.css';
 	add_editor_style( $editor_css_url . '?v=' . filemtime( $editor_css_path ) );
 }
 add_action( 'admin_enqueue_scripts', 'kapow_enqueue_admin_assets', 10 );
@@ -115,7 +115,7 @@ function kapow_enqueue_customize_preview_js() {
 	global $asset_suffix;
 
 	$live_preview_js_url  = get_stylesheet_directory_uri() . '/assets/js/customizer' . $asset_suffix . '.js';
-	$live_preview_js_path = dirname( KAPOW_ROOT ) . '/assets/js/customizer' . $asset_suffix . '.js';
+	$live_preview_js_path = dirname( MY_PROJECT_THEME_ROOT ) . '/assets/js/customizer' . $asset_suffix . '.js';
 
 	wp_enqueue_script(
 		'my-project-customizer',

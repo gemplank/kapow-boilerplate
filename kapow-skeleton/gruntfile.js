@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 				// -------------------------------------
 				// Theme images directory.
 				// -------------------------------------
-				img_dir: 'img',
+				img_dir: 'images',
 
 				// -------------------------------------
 				// Theme Javascript directory.

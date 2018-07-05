@@ -6,7 +6,7 @@
  */
 
 // Constants.
-define( 'KAPOW_ROOT', __FILE__ );
+define( 'MY_PROJECT_THEME_ROOT', __FILE__ );
 
 // Automatically import functional includes from the inc/ folder.
 foreach ( glob( get_stylesheet_directory() . '/inc/*.php' ) as $filename ) {

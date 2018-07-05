@@ -1,4 +1,11 @@
-<?php do_action( 'kapow_before_header' ); ?>
+<?php
+/**
+ * Site Header.
+ *
+ * @package My Project
+ */
+
+do_action( 'kapow_before_header' ); ?>
 
 <header class="site-header" role="banner">
 

@@ -7,9 +7,6 @@
  * @package My Project
  */
 
-$logo          = get_theme_mod( 'kapow_logo' );
-$logo_2x       = get_theme_mod( 'kapow_logo_retina' );
-$chrome_colour = get_theme_mod( 'kapow_mobile_chrome_colour' );
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -26,13 +23,6 @@ $chrome_colour = get_theme_mod( 'kapow_mobile_chrome_colour' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-	<?php
-	// Set the theme accent colour used by Chrome on Android.
-	if ( ! empty( $chrome_colour ) ) {
-		echo '<meta name="theme-color" content="' . esc_attr( $chrome_colour ) . '">';
-	}
-	?>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -51,7 +41,7 @@ $chrome_colour = get_theme_mod( 'kapow_mobile_chrome_colour' );
 
 <div class="hfeed site-container">
 
-	<?php get_template_part( 'template-parts/static/site-header' ); ?>
+	<?php get_template_part( 'template-parts/site-header' ); ?>
 
 	<div id="content" class="site-content">
 
