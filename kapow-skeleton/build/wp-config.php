@@ -77,8 +77,8 @@ define( 'WPLANG', '' );
 /**
  * Define Site URL: WordPress in a subdirectory.
  */
-defined( 'WP_SITEURL' ) || define( 'WP_SITEURL', 'http://my-project.local/wordpress' );
-defined( 'WP_HOME' ) || define( 'WP_HOME', 'http://my-project.local' );
+defined( 'WP_SITEURL' ) || define( 'WP_SITEURL', 'http://my-project.test/wordpress' );
+defined( 'WP_HOME' ) || define( 'WP_HOME', 'http://my-project.test' );
 
 /**
  * Define path and url for wp-content.

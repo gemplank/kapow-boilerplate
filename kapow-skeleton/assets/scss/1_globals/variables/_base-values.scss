@@ -1,0 +1,32 @@
+// Base Values.
+// -------------------------------------
+
+// Base - transition-duration.
+$global--transition-duration: 0.15s;
+
+// Base - transition style.
+$global--transition: all $global--transition-duration ease-in-out;
+
+// Base - global border radius.
+$global--border-radius: 3px;
+
+// Base - container readability width.
+$global--container-readability: 570px;
+
+// Base - Font Size in pixels.
+$global--font-size: 16px !default;
+
+// Base - Number of Grid Columns.
+$global--columns: 12 !default;
+
+// Base - Gutter Width in pixels.
+$global--gutter-width: 20px !default;
+
+// Base - Container Width in pixels.
+$global--container-width: 1280px !default;
+
+// Base - Row Width in pixels.
+$global--row-width: 1280px !default;
+
+// Base - Common spacing in pixels.
+$global--spacing-common: 24px;

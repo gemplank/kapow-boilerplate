@@ -1,0 +1,65 @@
+// Form styles.
+// --------------------------------------------------------------------------
+
+// Forms - Border.
+$kp-form--border: 1px solid $kp-colour-form--input-border;
+
+// Forms - Placeholder Styles.
+$kp-ph--styles: (color: $kp-colour-form--input, opacity: 1) !default;
+
+// Forms - Placeholder Prefixes.
+$kp-ph--prefixes: "::-webkit-input-placeholder", "::-moz-placeholder", ":-ms-input-placeholder", "::placeholder" !default;
+
+// Form fields.
+// -------------------------------------
+[type="tel"],
+[type="text"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="url"],
+textarea {
+	appearance: none;
+	background-color: $kp-colour-form--input-bg;
+	border-radius: 0;
+	border: $kp-form--border;
+	color: $kp-colour-form--input;
+	padding: kp-rem(8px);
+	transition: all ease-in-out 0.3s;
+
+	&:focus {
+		background-color: $kp-colour-form--input-focus-bg;
+		border-color: $kp-colour-form--input-focus-border;
+		color: $kp-colour-form--input-focus;
+	}
+}
+
+select {
+	border: $kp-form--border;
+	color: $kp-colour-form--input;
+	padding: kp-rem(8px);
+}
+
+input {
+	@include kp-placeholder-styles($kp-ph--styles);
+}
+
+textarea {
+	@include kp-placeholder-styles($kp-ph--styles);
+	height: kp-rem(150px);
+}
+
+// Submit buttons
+// -------------------------------------
+[type="reset"],
+[type="submit"] {
+	@include kp-reset-button;
+	background-color: $kp-colour-form--input-submit-bg;
+	color: $kp-colour-form--input-submit;
+	padding: kp-rem(8px);
+
+	@include kp-on-event {
+		background-color: darken($kp-colour-form--input-submit-bg, 20%);
+	}
+}

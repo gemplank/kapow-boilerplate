@@ -1,0 +1,9 @@
+// Global header region layout/styles.
+// -----------------------------------------------------------------------------
+
+.site-header {
+}
+
+.site-header__wrap {
+	@include site-wrap(normal);
+}

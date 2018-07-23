@@ -1,0 +1,95 @@
+/// Background colour that is IE friendly.
+/// @group cross-browser
+/// @param {String} $colour - Colour
+/// @param {String} $opacity [0.6] - Colour
+/// @example scss - Set the background to a semi-transparent black
+/// 	.bg-black {
+/// 		@include kp-bg-colour('#111', 0.4);
+/// 	}
+@mixin kp-bg-colour($colour, $opacity: 0.6) {
+	background-color: $colour; // Fallback for browsers that do not support rgba.
+	background-color: rgba($colour, $opacity);
+}
+
+/// Background size that is IE friendly.
+/// @group cross-browser
+/// @param {String} $type - Type
+/// @example scss - Set the background size to cover
+/// 	.intro-header {
+/// 		@include kp-bg-size('cover');
+/// 	}
+@mixin kp-bg-size($type) {
+	background-size: $type;
+
+	.lt-ie9 & {
+		-ms-behavior: url(/polyfills/backgroundsize.htc);
+	}
+}
+
+/// Background cover image properties.
+/// @group helpers
+/// @example scss - Add common cover background properties.
+/// 	.intro-header {
+/// 		@include kp-bg-image();
+/// 		background-image: url('assets/img/blue-sky.jpg');
+/// 	}
+@mixin kp-bg-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	@include kp-bg-size(cover);
+}
+
+/// Background gradients.
+/// @group css3
+/// @param {String} $direction - Direction of the gradient.
+/// @param {List} $stops - List of colour stops (hex then percentage).
+/// @example scss - Add a vertical gradient to a header, using two stops
+/// 	.intro-header {
+/// 		@include kp-bg-gradient( 'vertical', ( #000 0%, #fff 100% ) );
+/// 	}
+@mixin kp-bg-gradient($direction, $stops) {
+	background: nth(nth($stops, 1), 1);
+
+	@if $direction == "vertical" {
+		background: linear-gradient(to bottom, $stops);
+	}
+
+	@else if $direction == "horizontal" {
+		background: linear-gradient(to right, $stops);
+	}
+
+	@else if $direction == "diagonal" {
+		background: linear-gradient(to top right, $stops);
+	}
+
+	@else {
+		background: radial-gradient(ellipse at center, $stops);
+	}
+}
+
+/// Overlay.
+/// @group helpers
+/// @param {Number} opacity [0.6] - A decimal opacity value (0-1) for the overlay.
+/// @param {String} colour [$kp-colour--black] - Hexadecimal colour code for the overlay.
+/// @param {Bool} rel-parent [false] - Give the parent element a relative position.
+/// @example scss - Add a white overlay with minor transparency, and make the parent relative.
+/// 	.overlay {
+/// 		@include kp-overlay( 0.9, $kp-colour--white, true );
+/// 	}
+@mixin kp-overlay($opacity: 1, $colour: $kp-colour--black, $rel-parent: false) {
+	background-color: $colour;
+	bottom: 0;
+	display: block;
+	left: 0;
+	height: 100%;
+	opacity: $opacity;
+	position: absolute;
+	transition: opacity ease-in-out 0.3s;
+	width: 100%;
+
+	@if $rel-parent {
+		& {
+			position: relative;
+		}
+	}
+}

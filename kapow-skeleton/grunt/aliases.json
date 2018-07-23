@@ -1,0 +1,14 @@
+{
+	"build": [
+		"default",
+		"watch"
+	],
+	"images": [
+		"imagemin",
+		"svgmin",
+		"notify:images"
+	],
+	"sass-globbing": [
+		"sass_globbing"
+	]
+}

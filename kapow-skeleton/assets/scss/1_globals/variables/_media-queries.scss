@@ -1,0 +1,110 @@
+// Standard Breakpoints & Media Queries.
+// --------------------------------------------------------------------------
+// These are popular viewport sizes that cover the full spectrum of devices
+// including smartphones and tablets, laptops and desktops.
+//
+// Tweak the sizes by a few pixels here and there if you need to, or add your
+// own tweakpoints further down to cater for when the content breaks.
+//
+// To utilise these breakpoints in your Sass, use the `kp-mq()` mixin e.g.
+//
+// `@include kp-mq(xs) {`.
+//
+// A strictly enforced means of adding and using media queries reduces the
+// headaches caused by Sass files that are littered with `@media` rules!
+//
+// You can also change the breakpoint at which the mobile navigation kicks in
+// by setting the `$kp-mobile-nav-breakpoint` to a string matching the name
+// of a breakpoint e.g. sm, md etc.
+// --------------------------------------------------------------------------
+
+// Mobile navigation breakpoint
+$kp-mobile-nav-breakpoint: sm;
+
+// Breakpoint - Extra Extra Small.
+$kp-bp--xxs: 320px;
+
+// Media Query - Extra Extra Small (Min).
+$kp-mq--xxs-min: (min-width: $kp-bp--xxs);
+
+// Media Query - Extra Extra Small (Max).
+$kp-mq--xxs-max: (max-width: $kp-bp--xxs - 1);
+
+// Breakpoint - Extra Small.
+$kp-bp--xs: 480px;
+
+// Media Query - Extra Small (Min).
+$kp-mq--xs-min: (min-width: $kp-bp--xs);
+
+// Media Query - Extra Small (Max).
+$kp-mq--xs-max: (max-width: $kp-bp--xs - 1);
+
+// Breakpoint - Small.
+$kp-bp--sm: 768px;
+
+// Media Query - Small (Min).
+$kp-mq--sm-min: (min-width: $kp-bp--sm);
+
+// Media Query - Small (Max).
+$kp-mq--sm-max: (max-width: $kp-bp--sm - 1);
+
+// Breakpoint - Medium.
+$kp-bp--md: 1024px;
+
+// Media Query - Medium (Min).
+$kp-mq--md-min: (min-width: $kp-bp--md);
+
+// Media Query - Medium (Max).
+$kp-mq--md-max: (max-width: $kp-bp--md - 1);
+
+// Breakpoint - Large.
+$kp-bp--lg: 1280px;
+
+// Media Query - Large (Min).
+$kp-mq--lg-min: (min-width: $kp-bp--lg);
+
+// Media Query - Large (Max).
+$kp-mq--lg-max: (max-width: $kp-bp--lg - 1);
+
+// Breakpoint - Extra Large.
+$kp-bp--xl: 1440px;
+
+// Media Query - Extra Large (Min).
+$kp-mq--xl-min: (min-width: $kp-bp--xl);
+
+// Media Query - Extra Large (Max).
+$kp-mq--xl-max: (max-width: $kp-bp--xl - 1);
+
+// Breakpoint - Extra Extra Large.
+$kp-bp--xxl: 1600px;
+
+// Media Query - Extra Extra Large (Min).
+$kp-mq--xxl-min: (min-width: $kp-bp--xxl);
+
+// Media Query - Extra Extra Large (Max).
+$kp-mq--xxl-max: (max-width: $kp-bp--xxl - 1);
+
+// Breakpoints Map.
+$kp-breakpoints: ("xxs": $kp-mq--xxs-min, "xxs-max": $kp-mq--xxs-max, "xs": $kp-mq--xs-min, "xs-max": $kp-mq--xs-max, "sm": $kp-mq--sm-min, "sm-max": $kp-mq--sm-max, "md": $kp-mq--md-min, "md-max": $kp-mq--md-max, "lg": $kp-mq--lg-min, "lg-max": $kp-mq--lg-max, "xl": $kp-mq--xl-min, "xl-max": $kp-mq--xl-max, "xxl": $kp-mq--xxl-min, "xxl-max": $kp-mq--xxl-max) !default;
+
+// Custom Tweakpoints & Media Queries
+// --------------------------------------------------------------------------
+// Define any new 'tweakpoints' here to keep your specific media queries in
+// order.
+//
+// Use the 'Example' tweakpoint and create your own. You must add new
+// tweakpoints to the `$kp-tweakpoints` map so that it may be accessed by the
+// `kp-mq` mixin in your Sass e.g. `@include kp-mq(example) {`.
+// --------------------------------------------------------------------------
+
+// Tweakpoint - Example.
+$kp-tp--example: 380px;
+
+// Media Query - Example (Min).
+$kp-mq--example-min: (min-width: $kp-tp--example);
+
+// Media Query - Example (Max).
+$kp-mq--example-max: (max-width: $kp-tp--example - 1);
+
+// Tweakpoints map.
+$kp-tweakpoints: ("example": $kp-mq--example-min, "example-max": $kp-mq--example-max) !default;

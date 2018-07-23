@@ -1,0 +1,52 @@
+/// Hide text.
+/// @group helpers
+/// @example scss - Hide text off screen.
+/// 	.hidden-text {
+/// 		@include kp-hide-text();
+/// 	}
+@mixin kp-hide-text {
+	overflow: hidden;
+	padding: 0;
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+/// Visually hidden.
+/// @group helpers
+/// @example scss - Hide a skip-link so that it's only visible screen readers.
+/// 	.skip-link {
+/// 		@include kp-visuallyhidden();
+/// 	}
+@mixin kp-visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	// Allow the element to be focusable
+	// when navigated to via the keyboard
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+/// Screen reader only - alias for kp-visuallyhidden.
+/// @group helpers
+/// @alias kp-visuallyhidden
+/// @example scss - Hide a skip-link so that it's only visible screen readers.
+/// 	.skip-link {
+/// 		@include kp-sr-only();
+/// 	}
+@mixin kp-sr-only {
+	@include kp-visuallyhidden;
+}
