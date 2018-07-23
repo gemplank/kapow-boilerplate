@@ -27,7 +27,6 @@ assets/js/*.tmp.js
 
 # Composer.
 # -------------------------------------
-composer.lock
 vendor
 !assets/scss/vendor
 !build/wp-content/**/vendor/
@@ -39,22 +38,14 @@ node_modules
 
 # Documentation & Reports.
 # -------------------------------------
-
-docs/*
-!docs/.gitkeep
-reports/*
-!reports/.gitkeep
-
-# Databases
-# -------------------------------------
-database
-database/*
+wpcs-errors.md
 
 # WordPress.
 # -------------------------------------
 
 # Root
 build/*
+!build/static/
 !build/polyfills/
 !build/wp-content/
 !build/index.php
@@ -86,6 +77,7 @@ build/wp-content/themes/twentyfourteen/
 build/wp-content/themes/twentyfifteen/
 build/wp-content/themes/twentysixteen/
 build/wp-content/themes/twentyseventeen/
+build/wp-content/themes/twentyeighteen/
 
 # Themes - Custom
 build/wp-content/themes/my-project/assets/css/
