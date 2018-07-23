@@ -3,3 +3,5 @@
 # Kapow! Boilerplate
 
 The Kapow! boilerplate for bespoke WordPress site development.
+
+Comprehensive documentation coming Real Soon Now &trade;
