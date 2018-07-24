@@ -19,16 +19,15 @@ function kapow_get_svg( $slug, $width = 24, $height = 24, $title = '' ) {
 		return;
 	}
 
-	foreach ( glob( get_template_directory() . '/assets/svgs/*.svg' ) as $file ) {
+	foreach ( glob( get_stylesheet_directory() . '/assets/svgs/*.svg' ) as $file ) {
 
 		$path_parts = pathinfo( $file );
 		$file_slug  = $path_parts['filename'];
 
 		if ( $file_slug === $slug ) {
 
-			$text = ( ! empty( $title ) ) ? $title : $file_slug;
-
-			$old_svg       = wp_remote_get( $file );
+			$text          = ( ! empty( $title ) ) ? $title : $file_slug;
+			$old_svg       = file_get_contents( $file ); // @codingStandardsIgnoreLine
 			$find_string   = '<svg';
 			$str_to_insert = '<svg x="0px" y="0px" width="' . esc_attr( $width ) . '" height="' . esc_attr( $height ) . '"';
 			$pos           = strpos( $old_svg, $find_string );
