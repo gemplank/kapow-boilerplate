@@ -17,28 +17,23 @@
 	<exclude-pattern>*.min.js</exclude-pattern>
 
 	<!-- Excludes: Kapow! specific -->
-	<exclude-pattern>static/*</exclude-pattern>
-	<exclude-pattern>reports/*</exclude-pattern>
-	<exclude-pattern>docs/*</exclude-pattern>
 	<exclude-pattern>assets/*</exclude-pattern>
-	<exclude-pattern>provision/*</exclude-pattern>
 	<exclude-pattern>*.png</exclude-pattern>
 	<exclude-pattern>*.jpg</exclude-pattern>
 	<exclude-pattern>*.gif</exclude-pattern>
 	<exclude-pattern>build/wordpress/*</exclude-pattern>
-	<exclude-pattern>build/wp-content/plugins/(?!kapow-core/|project-core/)*/*</exclude-pattern>
-	<exclude-pattern>build/wp-content/plugins/index.php</exclude-pattern>
-	<exclude-pattern>build/wp-content/mu-plugins/(?!kapow-core/|project-core/)*/*</exclude-pattern>
+	<exclude-pattern>build/wp-content/plugins/*/*</exclude-pattern>
+	<exclude-pattern>build/wp-content/mu-plugins/(?!kapow-core/|my-project-core/)*/*</exclude-pattern>
 	<exclude-pattern>build/wp-content/themes/index.php</exclude-pattern>
 	<exclude-pattern>build/wp-content/index.php</exclude-pattern>
 	<exclude-pattern>build/polyfills/*</exclude-pattern>
+	<exclude-pattern>build/static/*</exclude-pattern>
 	<exclude-pattern>phpcs.xml</exclude-pattern>
+	<exclude-pattern>phpcs.xml.dist</exclude-pattern>
 
 	<!-- Includes -->
-	<include-pattern>build/wp-content/plugins/kapow-core/*</include-pattern>
-	<include-pattern>build/wp-content/plugins/project-core/*</include-pattern>
-	<include-pattern>build/wp-content/mu-plugins/kapow-core/*</include-pattern>
-	<include-pattern>build/wp-content/mu-plugins/project-core/*</include-pattern>
+	<include-pattern>build/wp-content/mu-plugins/kapow-core/*/*</include-pattern>
+	<include-pattern>build/wp-content/mu-plugins/my-project-core/*/*</include-pattern>
 
 	<!--
 		Don't get angry about checking files that don't contain code
@@ -95,14 +90,14 @@
 	<!-- Ensure that any i18n functions have a valid project-specific or Kapow textdomain -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="my-project,kapow,kapow-core,project-core" />
+			<property name="text_domain" type="array" value="my-project,kapow,kapow-core,my-project-core" />
 		</properties>
 	</rule>
 
 	<!-- Ensure that we're not using any functions deprecated three major versions ago -->
 	<rule ref="WordPress.WP.DeprecatedFunctions">
 		<properties>
-			<property name="minimum_supported_version" value="4.6" />
+			<property name="minimum_supported_version" value="4.7" />
 		</properties>
 	</rule>
 
@@ -111,7 +106,7 @@
 	<!-- Ensure that all globals have a project specific or Kapow prefix -->
 <!-- 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="my-project,kapow" />
+			<property name="prefixes" type="array" value="my_project,kapow" />
 		</properties>
 	</rule> -->
 </ruleset>
