@@ -1,10 +1,8 @@
 // Babel Task - https://github.com/babel/grunt-babel
 // ----------------------------------------------------------------------------
 module.exports = {
-
 	options: {
-		sourceMap: false,
-		presets: ['stage-0','es2015', 'es2016', 'es2017']
+		presets: ['@babel/preset-env']
 	},
 	// Transpile the Javascript.
 	//

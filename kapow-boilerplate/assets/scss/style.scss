@@ -10,135 +10,20 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: my-project
 */
 
-// -----------------------------------------------------------------------------
-// Initial Set-up Instructions
-// -----------------------------------------------------------------------------
-// # STEP 1 - CHOOSE A FRONT-END FRAMWORK.
-//
-// Choose your preferred framework by changing the `$kp-framework` variable
-// below to one of the following:
-//
-// - foundation
-// - bourbon
-// - bootstrap
-//
-// The default is `noframework`, which is ideal if you have no requirement for a
-// front-end framework of any kind, or wish to integrate a different framework
-// that is not supported.
-//
-// Kapow! includes a selection of useful mixins, functions and variables to help
-// you: essentially a micro-framework in itself.
-//
-// # STEP 2 - IMPORT FRAMEWORK.
-//
-// If you elected to use one of the above supported frameworks, un-comment the
-// relevant line under the 'Framework' heading (3) below. This will pull in
-// the dependencies for that framework and set-up the 'plumbing' between Kapow!
-// and the chosen framework.
-//
-// Then, configure the imports in this file to suit your requirements, adding
-// or commenting out as you see fit.
-//
-// # STEP 3 - REVIEW FRAMEWORK IMPORTS.
-//
-// By default, a number of framework imports are commented out to keep the
-// resulting CSS output as small as possible, using only the absolute bare
-// essentials to get started with the chosen framework.
-//
-// Now you can open the relevant file located in the `globals/settings/`
-// folder and un-comment the imports relevant to components/features that you
-// will need for your project:
-//
-// - _foundation-custom.scss
-// - _bourbon-custom.scss
-// - _bootstrap-custom.scss
-//
-// # STEP 4 - CONFIGURE SETTINGS/PLUMBING
-//
-// Head over to the `config/_settings.scss` file and add in any framework
-// specific overrides or additions into the relevant section in the file. Keep
-// coming back here as and when you need to make changes to framework settings.
-//
-// For example you may wish to override variables belonging to a specific
-// component to change its output, or global framework variables.
-//
-// You can also change the variables that make the plumbing between Kapow! and
-// the supported frameworks happen by editing the relevant section in the
-// `settings/_plumbing.scss` file.
-//
-// # STEP 5 - ADJUST TO YOUR TASTE
-//
-// Finally, head over to `config/` and start thinking about variables, mixins
-// and functions.
-//
-// The variables/mixins/functions that ship with Kapow! can be found in the
-// partials located in the relevant sub-folder. Feel free to change these values
-// to suit your specific requirements!
-//
-// If you need to add custom variables/mixins/functions, these should be added
-// to the project specific section in each file:
-//
-// - _functions.scss
-// - _mixins.scss
-// _ _variables.scss
-//
-// (Psst...if you have a lot of custom additions, feel free to add your own
-// partials and import them.)
-//
-// # SUCCESS!
-//
-// You're now familiar with the Kapow! Sass structure and are good to go and
-// start kicking ass with Sass! (groan)
-//
-// Make yourself a nice hot cup of tea/coffee and bask in your magnificence!
-// -----------------------------------------------------------------------------
-
-// Choose a framework!
+// Vendor.
 // -------------------------------------
-$kp-framework: noframework !default;
-
-// Config.
-// -------------------------------------
-@import "1_globals/_globals";
-
-// Reset.
-// -------------------------------------
-// The full path to the Normalize import
-// is required to prevent
-// confusion when Sass is processed.
-//
-// Feel free to comment this out if you
-// prefer to use an alternative reset.
-//
 // NOTE: We're leveraging `includePaths`
 // in Kapow! Grunt to avoid having to
 // add `../../bower_components` before
 // the import path.
 // -------------------------------------
-@import "normalize-scss/_normalize.scss";
+@import "normalize-scss/sass/normalize/_import-now.scss";
+// @import "slick-carousel/slick/slick.scss";
+// @import "select2/src/scss/core.scss";
 
-// Framework.
+// Config.
 // -------------------------------------
-// You MUST uncomment the relevant line
-// below for the Sass for your chosen
-// framework to be included.
-// -------------------------------------
-// @import "config/settings/foundation-custom";
-// @import "config/settings/bootstrap-custom";
-// @import "config/settings/bourbon-custom";
-
-// -------------------------------------
-// If you are using Kapow! Grunt, any
-// new or existing partials in the
-// following folders will be included
-// automatically using Sass globbing:
-//
-// - vendor
-// - base
-// - modules
-// - components
-// - templates
-// -------------------------------------
+@import "1_globals/_globals";
 
 // Project Sass.
 // -------------------------------------

@@ -78,9 +78,9 @@ module.exports = function(grunt) {
 				fonts_dir: 'fonts',
 
 				// -------------------------------------
-				// Icon assets directory
+				// SVG assets directory
 				// -------------------------------------
-				icons_dir: 'svgs',
+				svgs_dir: 'svgs',
 
 				// -------------------------------------
 				// Documentation path relative to the
@@ -156,8 +156,8 @@ module.exports = function(grunt) {
 				fonts_dir: 'fonts',
 
 				// -------------------------------------
-				// Theme icons directory
-				icons_dir: 'ico'
+				// Theme SVGs directory
+				svgs_dir: 'svgs'
 				// -------------------------------------
 			},
 
@@ -215,8 +215,6 @@ module.exports = function(grunt) {
 			// included for concatenation.
 			// -------------------------------------
 			concatFoot: [
-				// 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-				// 'bower_components/foundation/js/foundation.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_*_f.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_parts_dir %>/_*_f.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/footer.js'

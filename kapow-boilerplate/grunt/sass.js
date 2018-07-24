@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 // Sass Task - https://github.com/sindresorhus/grunt-sass
 // ----------------------------------------------------------------------------
 module.exports = {
@@ -5,8 +7,9 @@ module.exports = {
 	// -------------------------------------
 	scss: {
 		options: {
+			implementation: sass,
 			includePaths: [
-				'node_modules/@bower_components/',
+				'node_modules/',
 			],
 			sourceMap: true,
 			style: 'compressed'

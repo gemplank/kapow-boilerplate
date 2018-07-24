@@ -27,7 +27,7 @@ do_action( 'kapow_before_header' ); ?>
 
 				<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 
-					<?php kapow_get_icon( 'menu-icon', 40, 40 ); ?>
+					<?php kapow_get_svg( 'menu-icon', 40, 40 ); ?>
 
 				</button>
 

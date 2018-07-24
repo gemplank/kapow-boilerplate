@@ -6,13 +6,13 @@
  */
 
 /**
- * Get SVG icons
+ * Get SVGs
  *
  * @param string $slug   Slug name of the icon.
  * @param int    $width  Width of the icon in pixels.
  * @param int    $height Height of the icon in pixels.
  */
-function kapow_get_icon( $slug, $width = 24, $height = 24 ) {
+function kapow_get_svg( $slug, $width = 24, $height = 24 ) {
 
 	if ( empty( $slug ) ) {
 		return;
@@ -28,6 +28,28 @@ function kapow_get_icon( $slug, $width = 24, $height = 24 ) {
 			<rect class="rect3" width="320" height="32"></rect>
 		</svg>
 		<?php
+	}
+
+	foreach( glob( get_template_directory() . '/assets/svgs/*.svg' ) as $file ) {
+		$path_parts = pathinfo($file);
+		$file_slug = $path_parts['filename'];
+
+		if ( $file_slug === $slug ) {
+
+			$old_svg = file_get_contents($file);
+
+			$find_string   = '<svg';
+			$str_to_insert = '<svg x="0px" y="0px" width="' . esc_attr( $width ) . '" height="' . esc_attr( $height ) . '"';
+			$pos = strpos($old_svg, $find_string);
+
+			$new_svg = substr_replace($old_svg, $str_to_insert, $pos, 0);
+
+			$search = "/<title[^>]*>.*?<\/title>/i";
+			$new_title = "<title>" . $file_slug . "</title>";
+
+			echo preg_replace( $search, $new_title, $new_svg );
+
+		}
 	}
 }
 

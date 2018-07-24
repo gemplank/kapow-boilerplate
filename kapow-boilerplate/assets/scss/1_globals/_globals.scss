@@ -37,54 +37,11 @@
 @import "mixins/typography";
 @import "mixins/z-index";
 
-
-// Framework Settings.
-// NOTE: This partial is imported *before* we import the Sass for your chosen
-// framework - so any settings you define here will override any framework
-// specific defaults, due to the nature of the plumbing involved.
-//
-// Kapow! is 'plumbed in' to Foundation, Bootstrap and Bourbon + Neat, so a
-// handful of core settings have already been defined for each framework to
-// ensure this plumbing works. Think of Kapow! as a middleware layer between
-// your project and these frameworks.
-//
-// Look in `settings/_plumbing.scss` to view or make changes to the plumbing!
-//
-// If you haven't already done so, head over to `assets/style.scss` and
-// change the value of `$kp-framework` to the one you wish to use for
-// this project, and uncomment the relevant @import statement underneath the
-// 'Frameworks' heading.
-//
-// Then, come back to this file and add your additional framework setting
-// overrides and additions in the relevant section below.
-
-// Import our 'plumbing' settings so the
-// Kapow! Sass variables override some
-// of the important framework settings
-// such as columns, row width etc.
-//
-// Removing this @import will cause
-// problems in this build.
-@import "settings/plumbing";
-
-// Foundation overrides.
-@if $kp-framework == "foundation" {
-	// Add your own!
-}
-
-// Bourbon + Neat overrides.
-@if $kp-framework == "bourbon" {
-	// Add your own!
-}
-
-// Bootstrap overrides.
-@if $kp-framework == "bootstrap" {
-	// Add your own!
-}
-
+// Resets
 @import 'reset/reset';
 @import 'reset/print';
 @import 'reset/wordpress';
+
 @import 'helpers';
 @import 'font-face';
 @import 'base';
