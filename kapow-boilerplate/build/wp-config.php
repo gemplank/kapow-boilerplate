@@ -23,14 +23,14 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 }
 
 /**
- *	Production settings.
+ * Production settings.
  */
-defined( 'DB_NAME' )     || define( 'DB_NAME', '' );
-defined( 'DB_USER' )     || define( 'DB_USER', '' );
+defined( 'DB_NAME' ) || define( 'DB_NAME', '' );
+defined( 'DB_USER' ) || define( 'DB_USER', '' );
 defined( 'DB_PASSWORD' ) || define( 'DB_PASSWORD', '' );
-defined( 'DB_HOST' )     || define( 'DB_HOST', '' );
-defined( 'DB_CHARSET' )  || define( 'DB_CHARSET', 'utf8' );
-defined( 'DB_COLLATE' )  || define( 'DB_COLLATE', '' );
+defined( 'DB_HOST' ) || define( 'DB_HOST', '' );
+defined( 'DB_CHARSET' ) || define( 'DB_CHARSET', 'utf8' );
+defined( 'DB_COLLATE' ) || define( 'DB_COLLATE', '' );
 
 /**
  * Authentication Unique Keys and Salts.
@@ -46,14 +46,14 @@ defined( 'DB_COLLATE' )  || define( 'DB_COLLATE', '' );
 if ( file_exists( __DIR__ . '/salt.php' ) ) {
 	require __DIR__ . '/salt.php';
 } else {
-	define( 'AUTH_KEY',         '' );
-	define( 'SECURE_AUTH_KEY',  '' );
-	define( 'LOGGED_IN_KEY',    '' );
-	define( 'NONCE_KEY',        '' );
-	define( 'AUTH_SALT',        '' );
+	define( 'AUTH_KEY', '' );
+	define( 'SECURE_AUTH_KEY', '' );
+	define( 'LOGGED_IN_KEY', '' );
+	define( 'NONCE_KEY', '' );
+	define( 'AUTH_SALT', '' );
 	define( 'SECURE_AUTH_SALT', '' );
-	define( 'LOGGED_IN_SALT',   '' );
-	define( 'NONCE_SALT',       '' );
+	define( 'LOGGED_IN_SALT', '' );
+	define( 'NONCE_SALT', '' );
 }
 
 /**
@@ -62,7 +62,7 @@ if ( file_exists( __DIR__ . '/salt.php' ) ) {
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -109,4 +109,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' ); }
 
 /** Sets up WordPress vars and included files. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once ABSPATH . 'wp-settings.php';

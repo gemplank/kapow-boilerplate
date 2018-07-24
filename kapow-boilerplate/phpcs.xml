@@ -104,9 +104,9 @@
 	<!-- These two sniffs won't be able until WPCS 0.12.0 -->
 
 	<!-- Ensure that all globals have a project specific or Kapow prefix -->
-<!-- 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array" value="my_project,kapow" />
 		</properties>
-	</rule> -->
+	</rule>
 </ruleset>

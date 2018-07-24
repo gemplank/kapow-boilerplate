@@ -12,31 +12,17 @@
 
 	</div>
 
-	<?php do_action( 'kapow_before_footer' ); ?>
+	<?php get_template_part( 'template-parts/site-footer' ); ?>
 
-	<footer class="site-footer" role="contentinfo">
-
-		<div class="site-footer__wrap">
-		<?php do_action( 'kapow_before_footer_content' ); ?>
-
-		<div class="site-info">
-
-			<p>&copy; <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'All rights reserved.' , 'my-project' ); ?></p>
-
-		</div>
-
-		<?php do_action( 'kapow_after_footer_content' ); ?>
-
-	</footer>
-
-	<?php do_action( 'kapow_after_footer' ); ?>
 	</div>
 
 </div>
 
-<?php do_action( 'kapow_before_wp_footer' ); ?>
+<?php
+do_action( 'kapow_before_wp_footer' );
 
-<?php wp_footer(); ?>
+wp_footer();
+?>
 
 </body>
 

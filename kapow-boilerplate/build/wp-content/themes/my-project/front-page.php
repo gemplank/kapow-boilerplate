@@ -7,15 +7,17 @@
  * @package My Project
  */
 
-get_header(); ?>
+get_header();
 
-	<?php do_action( 'kapow_front_page_intro' ); ?>
+do_action( 'kapow_front_page_intro' );
+?>
 
 	<main class="site-main">
 
 		<div class="template-front-page">
 
-			<?php do_action( 'kapow_before_main_content' );
+			<?php
+			do_action( 'kapow_before_main_content' );
 
 			while ( have_posts() ) {
 
@@ -24,7 +26,8 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'page-front' );
 			}
 
-			do_action( 'kapow_after_main_content' ); ?>
+			do_action( 'kapow_after_main_content' );
+			?>
 
 		</div>
 

@@ -102,14 +102,14 @@ function kapow_responsive_image( $img_id, $img_settings, $default_img_size = '',
 					// Add the info to the srcset array if
 					// the retina size is available.
 					if ( ! empty( $retina_img_src ) ) {
-						$srcsets[] = array( $retina_img_src[0] . ' 2x',  $img_breakpoint );
+						$srcsets[] = array( $retina_img_src[0] . ' 2x', $img_breakpoint );
 					}
 				}
 
 				// Add the standard 1x image.
 				$srcsets[] = array( $img_src[0] . ' 1x', $img_breakpoint );
 			}
-		} // End foreach().
+		}
 
 		// If the default image size has been passed in.
 		if ( ! empty( $default_img_size ) ) {
@@ -141,7 +141,7 @@ function kapow_responsive_image( $img_id, $img_settings, $default_img_size = '',
 
 		// Close.
 		echo '/></picture>';
-	} // End if().
+	}
 }
 
 /**
@@ -169,6 +169,7 @@ function kapow_responsive_image( $img_id, $img_settings, $default_img_size = '',
  * @param int    $img_id           Post ID of the image attachment.
  * @param array  $img_settings     Array of image sizes and breakpoints.
  * @param string $default_img_size Slug name of the default size to be used.
+ * @param string $retina_support   Whether to enable retina support.
  * @param bool   $return           Whether to return or echo the attributes.
  */
 function kapow_responsive_bg_image_attrs( $img_id, $img_settings, $default_img_size, $retina_support = false, $return = true ) {
@@ -235,7 +236,7 @@ function kapow_responsive_bg_image_attrs( $img_id, $img_settings, $default_img_s
 		} else {
 			echo $data_attributes; // WPCS: XSS OK.
 		}
-	} // End if().
+	}
 }
 
 /**
@@ -272,7 +273,7 @@ function kapow_entry_meta() {
 	if ( 'post' === get_post_type() ) {
 
 		$categories_list = get_the_category_list( esc_html__( ', ', 'my-project' ) );
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'my-project' ) );
+		$tags_list       = get_the_tag_list( '', esc_html__( ', ', 'my-project' ) );
 
 		if ( $categories_list && kapow_categorized_blog() || $tags_list ) {
 			echo '<p>';
@@ -345,4 +346,4 @@ function kapow_category_transient_flusher() {
 	delete_transient( 'kapow_categories' );
 }
 add_action( 'edit_category', 'kapow_category_transient_flusher' );
-add_action( 'save_post',     'kapow_category_transient_flusher' );
+add_action( 'save_post', 'kapow_category_transient_flusher' );

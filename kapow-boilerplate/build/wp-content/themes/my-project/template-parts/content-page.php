@@ -13,25 +13,22 @@
 
 	<header class="entry-header">
 
-		<?php do_action( 'kapow_featured_image' ); ?>
+		<?php
+		do_action( 'kapow_featured_image' );
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		the_title( '<h1 class="entry-title">', '</h1>' );
+		?>
 
 	</header>
 
 	<div class="entry-content">
 
-		<?php do_action( 'kapow_before_post_content' ); ?>
-
-		<?php the_content(); ?>
-
-		<?php do_action( 'kapow_after_post_content' ); ?>
-
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:' , 'my-project' ),
-				'after'  => '</div>',
-			) );
+		do_action( 'kapow_before_post_content' );
+
+		the_content();
+
+		do_action( 'kapow_after_post_content' );
 		?>
 
 	</div>

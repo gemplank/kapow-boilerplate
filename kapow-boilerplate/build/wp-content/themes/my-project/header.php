@@ -27,17 +27,19 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-	<?php do_action( 'kapow_before_wp_head' ); ?>
+	<?php
+	do_action( 'kapow_before_wp_head' );
 
-	<?php wp_head(); ?>
+	wp_head();
 
-	<?php do_action( 'kapow_after_wp_head' ); ?>
+	do_action( 'kapow_after_wp_head' );
+	?>
 </head>
 
 <body <?php body_class(); ?>>
 
-<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content' , 'my-project' ); ?></a>
-<a class="skip-link sr-only" href="#site-navigation"><?php esc_html_e( 'Skip to navigation' , 'my-project' ); ?></a>
+<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'my-project' ); ?></a>
+<a class="skip-link sr-only" href="#site-navigation"><?php esc_html_e( 'Skip to navigation', 'my-project' ); ?></a>
 
 <div class="hfeed site-container">
 
