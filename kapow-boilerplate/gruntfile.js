@@ -215,8 +215,6 @@ module.exports = function(grunt) {
 			// included for concatenation.
 			// -------------------------------------
 			concatFoot: [
-				// 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-				// 'bower_components/foundation/js/foundation.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_*_f.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_parts_dir %>/_*_f.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/footer.js'
