@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.6.0
- * Build https://modernizr.com/download?-canvas-cssanimations-csscolumns-cssgradients-csstransforms-csstransitions-cssvhunit-cssvwunit-flexbox-inlinesvg-localstorage-placeholder-shapes-svg-video-domprefixes-mq-prefixed-prefixes-setclasses-testallprops-testprop-dontmin
+ * Build https://modernizr.com/download?-canvas-contains-cssanimations-csscolumns-cssgradients-csstransforms-csstransitions-cssvhunit-cssvwunit-flexbox-inlinesvg-localstorage-placeholder-shapes-supports-svg-video-domprefixes-mq-prefixed-prefixes-setclasses-testallprops-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1600,6 +1600,44 @@ Modernizr.video.ogg     // 'probably'
 
     return bool;
   });
+
+/*!
+{
+  "name": "ES5 String.prototype.contains",
+  "property": "contains",
+  "authors": ["Robert Kowalski"],
+  "tags": ["es6"]
+}
+!*/
+/* DOC
+Check if browser implements ECMAScript 6 `String.prototype.contains` per specification.
+*/
+
+  Modernizr.addTest('contains', is(String.prototype.contains, 'function'));
+
+/*!
+{
+  "name": "CSS Supports",
+  "property": "supports",
+  "caniuse": "css-featurequeries",
+  "tags": ["css"],
+  "builderAliases": ["css_supports"],
+  "notes": [{
+    "name": "W3 Spec",
+    "href": "http://dev.w3.org/csswg/css3-conditional/#at-supports"
+  },{
+    "name": "Related Github Issue",
+    "href": "https://github.com/Modernizr/Modernizr/issues/648"
+  },{
+    "name": "W3 Info",
+    "href": "http://dev.w3.org/csswg/css3-conditional/#the-csssupportsrule-interface"
+  }]
+}
+!*/
+
+  var newSyntax = 'CSS' in window && 'supports' in window.CSS;
+  var oldSyntax = 'supportsCSS' in window;
+  Modernizr.addTest('supports', newSyntax || oldSyntax);
 
 
   // Run each test
