@@ -115,7 +115,9 @@ $kp-framework: noframework !default;
 // add `../../bower_components` before
 // the import path.
 // -------------------------------------
-@import "normalize-scss/_normalize.scss";
+@import "normalize-scss/sass/normalize/_import-now.scss";
+// @import "slick-carousel/slick/slick.scss";
+// @import "select2/src/scss/core.scss";
 
 // Framework.
 // -------------------------------------
