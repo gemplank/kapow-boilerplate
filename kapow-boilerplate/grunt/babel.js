@@ -4,7 +4,7 @@ module.exports = {
 
 	options: {
 		sourceMap: false,
-		presets: ['stage-0','es2015', 'es2016', 'es2017']
+		presets: ["env"]
 	},
 	// Transpile the Javascript.
 	//
