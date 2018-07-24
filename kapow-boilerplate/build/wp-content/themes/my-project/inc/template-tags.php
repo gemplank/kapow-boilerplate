@@ -11,23 +11,12 @@
  * @param string $slug   Slug name of the icon.
  * @param int    $width  Width of the icon in pixels.
  * @param int    $height Height of the icon in pixels.
+ * @param string $title  Optional title for screen readers.
  */
-function kapow_get_svg( $slug, $width = 24, $height = 24 ) {
+function kapow_get_svg( $slug, $width = 24, $height = 24, $title = '' ) {
 
 	if ( empty( $slug ) ) {
 		return;
-	}
-
-	// Menu.
-	if ( 'menu-icon' === $slug ) {
-		?>
-		<svg class="<?php echo esc_attr( $slug ); ?>" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
-			<title><?php esc_html_e( 'Menu Icon', 'my-project' ); ?></title>
-			<rect class="rect1" width="320" height="32"></rect>
-			<rect class="rect2" width="320" height="32"></rect>
-			<rect class="rect3" width="320" height="32"></rect>
-		</svg>
-		<?php
 	}
 
 	foreach ( glob( get_template_directory() . '/assets/svgs/*.svg' ) as $file ) {
@@ -37,19 +26,17 @@ function kapow_get_svg( $slug, $width = 24, $height = 24 ) {
 
 		if ( $file_slug === $slug ) {
 
-			$old_svg = file_get_contents( $file );
+			$text = ( ! empty( $title ) ) ? $title : $file_slug;
 
+			$old_svg       = wp_remote_get( $file );
 			$find_string   = '<svg';
 			$str_to_insert = '<svg x="0px" y="0px" width="' . esc_attr( $width ) . '" height="' . esc_attr( $height ) . '"';
-			$pos = strpos($old_svg, $find_string);
-
-			$new_svg = substr_replace( $old_svg, $str_to_insert, $pos, 0 );
-
-			$search    = '/<title[^>]*>.*?<\/title>/i';
-			$new_title = '<title>' . $file_slug . '</title>'';
+			$pos           = strpos( $old_svg, $find_string );
+			$new_svg       = substr_replace( $old_svg, $str_to_insert, $pos, 0 );
+			$search        = '/<title[^>]*>.*?<\/title>/i';
+			$new_title     = '<title>' . $text . '</title>';
 
 			echo preg_replace( $search, $new_title, $new_svg ); // WPCS: XSS OK.
-
 		}
 	}
 }
