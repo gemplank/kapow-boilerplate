@@ -18,7 +18,7 @@ get_header(); ?>
 			<header class="page-header">
 
 				<h1 id="not-found-heading" class="page-title">
-					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.' , 'my-project' ); ?>
+					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'my-project' ); ?>
 				</h1>
 
 			</header>
@@ -27,11 +27,13 @@ get_header(); ?>
 
 				<?php do_action( 'kapow_before_post_content' ); ?>
 
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' , 'my-project' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'my-project' ); ?></p>
 
-				<?php get_search_form(); ?>
+				<?php
+				get_search_form();
 
-				<?php do_action( 'kapow_after_post_content' ); ?>
+				do_action( 'kapow_after_post_content' );
+				?>
 
 			</div>
 
@@ -41,4 +43,5 @@ get_header(); ?>
 
 	</main>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

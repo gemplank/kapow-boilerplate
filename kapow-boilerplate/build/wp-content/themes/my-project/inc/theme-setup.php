@@ -28,8 +28,8 @@ function kapow_theme_setup() {
 	 * Register navigation menus.
 	 */
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu' , 'my-project' ),
-		'footer'  => esc_html__( 'Footer Menu' , 'my-project' ),
+		'primary' => esc_html__( 'Primary Menu', 'my-project' ),
+		'footer'  => esc_html__( 'Footer Menu', 'my-project' ),
 	) );
 
 	/*

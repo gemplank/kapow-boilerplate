@@ -21,11 +21,13 @@
 
 	<div class="entry-content">
 
-		<?php do_action( 'kapow_before_post_content' ); ?>
+		<?php
+		do_action( 'kapow_before_post_content' );
 
-		<?php the_content(); ?>
+		the_content();
 
-		<?php do_action( 'kapow_after_post_content' ); ?>
+		do_action( 'kapow_after_post_content' );
+		?>
 
 	</div>
 

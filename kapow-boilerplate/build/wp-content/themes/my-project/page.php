@@ -7,13 +7,15 @@
  * @package My Project
  */
 
-get_header(); ?>
+get_header();
+?>
 
 <div class="template-page">
 
 	<main class="site-main">
 
-		<?php do_action( 'kapow_before_main_content' );
+		<?php
+		do_action( 'kapow_before_main_content' );
 
 		while ( have_posts() ) {
 			the_post();
@@ -21,7 +23,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'page' );
 		}
 
-		do_action( 'kapow_after_main_content' ); ?>
+		do_action( 'kapow_after_main_content' );
+		?>
 
 	</main>
 

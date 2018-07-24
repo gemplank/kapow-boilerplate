@@ -14,22 +14,25 @@
 	<header class="page-header">
 
 		<h1 id="not-found-heading" class="page-title">
-			<?php esc_html_e( 'Nothing Found' , 'my-project' ); ?>
+			<?php esc_html_e( 'Nothing Found', 'my-project' ); ?>
 		</h1>
 
 	</header>
 
 	<div class="page-content">
 
-		<?php do_action( 'kapow_before_post_content' ); ?>
+		<?php
+		do_action( 'kapow_before_post_content' );
 
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+		if ( is_home() && current_user_can( 'publish_posts' ) ) {
+			?>
 
-			<p><?php
+			<p>
+				<?php
 				printf(
 					wp_kses(
 						/* translators: the post permalink. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.' , 'my-project' ),
+						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'my-project' ),
 						array(
 							'a' => array(
 								'href' => array(),
@@ -39,21 +42,28 @@
 					esc_url( admin_url( 'post-new.php' )
 					)
 				);
-			?></p>
+				?>
+			</p>
 
-		<?php elseif ( is_search() ) : ?>
+			<?php
+		} elseif ( is_search() ) {
+			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' , 'my-project' ); ?></p>
-			<?php get_search_form(); ?>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'my-project' ); ?></p>
 
-		<?php else : ?>
+			<?php
+			get_search_form();
+		} else {
+			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.' , 'my-project' ); ?></p>
-			<?php get_search_form(); ?>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'my-project' ); ?></p>
 
-		<?php endif; ?>
+			<?php
+			get_search_form();
+		}
 
-		<?php do_action( 'kapow_after_post_content' ); ?>
+		do_action( 'kapow_after_post_content' );
+		?>
 
 	</div>
 

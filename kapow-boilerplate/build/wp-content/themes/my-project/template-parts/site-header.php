@@ -10,6 +10,7 @@ do_action( 'kapow_before_header' ); ?>
 <header class="site-header" role="banner">
 
 	<div class="site-header__wrap">
+
 	<?php do_action( 'kapow_before_header_content' ); ?>
 
 		<div class="site-header__row">
@@ -17,9 +18,7 @@ do_action( 'kapow_before_header' ); ?>
 			<div class="site-header__logo">
 
 				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-
 					LOGO
-
 				</a>
 
 			</div>
@@ -46,7 +45,9 @@ do_action( 'kapow_before_header' ); ?>
 							'container'      => false,
 						)
 					);
-					do_action( 'kapow_after_primary_nav' ); ?>
+					do_action( 'kapow_after_primary_nav' );
+					?>
+
 				</nav>
 
 			</div>
@@ -54,8 +55,10 @@ do_action( 'kapow_before_header' ); ?>
 		</div>
 
 	<?php do_action( 'kapow_after_header_content' ); ?>
+
 	</div>
 
 </header>
 
-<?php do_action( 'kapow_after_header' ); ?>
+<?php
+do_action( 'kapow_after_header' );
