@@ -6,13 +6,13 @@
  */
 
 /**
- * Get SVG icons
+ * Get SVGs
  *
  * @param string $slug   Slug name of the icon.
  * @param int    $width  Width of the icon in pixels.
  * @param int    $height Height of the icon in pixels.
  */
-function kapow_get_icon( $slug, $width = 24, $height = 24 ) {
+function kapow_get_svg( $slug, $width = 24, $height = 24 ) {
 
 	if ( empty( $slug ) ) {
 		return;

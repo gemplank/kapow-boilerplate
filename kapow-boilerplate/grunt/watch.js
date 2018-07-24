@@ -42,7 +42,7 @@ module.exports = {
 	// Minify SVG images.
 	// -------------------------------------
 	images_svg: {
-		files: [ '<%= siteInfo.assets_path %>/<%= siteInfo.icons_dir %>/**/*.svg' ],
+		files: [ '<%= siteInfo.assets_path %>/<%= siteInfo.svgs_dir %>/**/*.svg' ],
 		tasks: [
 			'newer:svgmin',
 			'notify:images'

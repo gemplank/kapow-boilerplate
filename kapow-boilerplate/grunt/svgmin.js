@@ -25,9 +25,9 @@ module.exports = {
     svg: {
         files: [{
             expand: true,
-            cwd: '<%= siteInfo.assets_path %>/<%= siteInfo.icons_dir %>',
+            cwd: '<%= siteInfo.assets_path %>/<%= siteInfo.svgs_dir %>',
             src: ['**/*.svg'],
-            dest: '<%= wpInfo.wp_content %>/<%= wpInfo.themes_dir %>/<%= wpInfo.theme_name %>/<%= wpInfo.assets_dir %>/<%= wpInfo.icons_dir %>'
+            dest: '<%= wpInfo.wp_content %>/<%= wpInfo.themes_dir %>/<%= wpInfo.theme_name %>/<%= wpInfo.assets_dir %>/<%= wpInfo.svgs_dir %>'
         }]
     }
 };
