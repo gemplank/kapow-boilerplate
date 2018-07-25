@@ -5,3 +5,5 @@
 The Kapow! boilerplate for bespoke WordPress site development.
 
 Comprehensive documentation coming Real Soon Now &trade;
+
+Best used with [Kapow! Setup](https://github.com/kapow-wp/kapow-setup).
