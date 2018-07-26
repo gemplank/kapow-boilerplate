@@ -1,4 +1,4 @@
-![Kapow! Logo Banner](https://raw.githubusercontent.com/kapow-wp/kapow-skeleton/master/kapow-full-logo-x2.png)
+![Kapow! Logo Banner](https://raw.githubusercontent.com/kapow-wp/kapow-boilerplate/master/kapow-full-logo-x2.png)
 
 # Kapow! Boilerplate
 
