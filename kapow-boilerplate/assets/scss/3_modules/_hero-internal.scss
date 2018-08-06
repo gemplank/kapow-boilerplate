@@ -1,0 +1,101 @@
+.hero-internal {
+	position: relative;
+	background-color: $my-project--dark;
+	background-image: url('https://source.unsplash.com/1o4Z1EwCkaY/1600x900');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $my-project--white;
+	.hero-internal__wrap {
+		@include site-wrap(normal);
+		height: auto;
+		@include padding(internal-hero);
+	}
+}
+
+.hero-internal--narrow {
+	.hero-internal__wrap {
+		@include site-wrap(narrow);
+	}
+
+	.hero-internal__overlay {
+		background: rgba($my-project--dark, 0.6);
+		@include kp-mq(sm) {
+			background: rgba($my-project--dark, 0.6);
+		}
+		@include kp-mq(md) {
+			background: rgba($my-project--dark, 0.6);
+		}
+	}
+}
+
+.hero-internal__overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba($my-project--dark, 0.6);
+	@include kp-mq(sm) {
+		background: linear-gradient(to right, rgba($my-project--dark,0.6) 0%,rgba($my-project--dark,0.6) 50%,rgba($my-project--dark,0) 80%,rgba($my-project--dark,0) 100%);
+	}
+	@include kp-mq(md) {
+		background: linear-gradient(to right, rgba($my-project--dark,0.6) 0%,rgba($my-project--dark,0.6) 30%,rgba($my-project--dark,0) 60%,rgba($my-project--dark,0) 100%);
+	}
+}
+
+.hero-internal__content {
+	@include trim(margin, 3);
+	@include kp-mq(xs) {
+		width: 100%;
+		max-width: 450px;
+		display: block;
+	}
+
+	@include kp-mq(md) {
+		max-width: 500px;
+	}
+
+	@include kp-mq(lg) {
+		max-width: 580px;
+	}
+}
+
+.hero-internal__heading {
+	font-weight: $kp-font-weight--bold;
+	@include kp-mq(md) {
+		font-size: kp-rem(45px);
+		line-height: kp-rem(50px);
+	}
+
+	@include kp-mq(lg) {
+		font-size: kp-rem(55px);
+		line-height: kp-rem(60px);
+	}
+}
+
+.hero-internal__text {
+	font-size: kp-rem(18px);
+}
+
+
+// Without image
+.hero-internal--without-image {
+	background: none;
+	background-color: $my-project--offwhite;
+	//background: linear-gradient(-45deg, darken($my-project-blue, 5%) 0%, $my-project-blue 50%, lighten($my-project-blue, 5%) 100%);
+	background-position: center;
+	color: $my-project--dark;
+
+	.hero-internal__wrap {
+		@include padding(internal-hero-small);
+	}
+
+	.hero-internal__overlay {
+		background: transparent;
+		@include kp-mq(sm) {background: transparent;}
+		@include kp-mq(md) {background: transparent;}
+	}
+}

@@ -79,6 +79,99 @@
 	}
 }
 
+@mixin padding($type : null) {
+	@if $type == 'internal-hero' {
+		padding-top: kp-rem($global--gutter-width + 25px);
+		padding-bottom: kp-rem($global--gutter-width + 25px);
+		@include kp-mq(sm) {
+			padding-top: kp-rem($global--gutter-width + 50px);
+			padding-bottom: kp-rem($global--gutter-width + 50px);
+		}
+		@include kp-mq(md) {
+			padding-top: kp-rem($global--gutter-width + 70px);
+			padding-bottom: kp-rem($global--gutter-width + 70px);
+		}
+		@include kp-mq(lg) {
+			padding-top: kp-rem($global--gutter-width + 100px);
+			padding-bottom: kp-rem($global--gutter-width + 100px);
+		}
+	}
+
+	@if $type == 'internal-hero-small' {
+		padding-top: kp-rem($global--gutter-width + 25px);
+		padding-bottom: kp-rem($global--gutter-width + 25px);
+		@include kp-mq(sm) {
+			padding-top: kp-rem($global--gutter-width + 40px);
+			padding-bottom: kp-rem($global--gutter-width + 40px);
+		}
+		@include kp-mq(md) {
+			padding-top: kp-rem($global--gutter-width + 40px);
+			padding-bottom: kp-rem($global--gutter-width + 40px);
+		}
+		@include kp-mq(lg) {
+			padding-top: kp-rem($global--gutter-width + 40px);
+			padding-bottom: kp-rem($global--gutter-width + 40px);
+		}
+	}
+
+	@if $type == 'homepage-panel' {
+		padding-top: kp-rem(40px);
+		padding-bottom: kp-rem(40px);
+		@include kp-mq(sm) {
+			padding-top: kp-rem(40 * 1.5);
+			padding-bottom: kp-rem(40 * 1.5);
+		}
+		@include kp-mq(md) {
+			padding-top: kp-rem(40 * 2);
+			padding-bottom: kp-rem(40 * 2);
+		}
+	}
+
+	@if $type == 'content-element' {
+		padding-bottom: kp-rem(40px);
+		@include kp-mq(xs) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(sm) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(md) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(lg) {padding-bottom: kp-rem(40px);}
+	}
+
+	@if $type == 'sidebar-element' {
+		padding-bottom: kp-rem(40px);
+		border-bottom: 1px solid $mantis-offwhite;
+		margin-bottom: kp-rem(40px);
+		@include kp-mq(xs) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(sm) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(md) {padding-bottom: kp-rem(40px);}
+		@include kp-mq(lg) {padding-bottom: kp-rem(40px);}
+	}
+
+	@if $type == 'site-element' {
+		padding: kp-rem(20px) 0;
+		@include kp-mq(xs) {padding: kp-rem(20px) 0;}
+		@include kp-mq(sm) {padding: kp-rem(30px) 0;}
+		@include kp-mq(md) {padding: kp-rem(40px) 0;}
+		@include kp-mq(lg) {padding: kp-rem(40px) 0;}
+	}
+}
+
+// Trim margins
+@mixin trim($type : margin, $depth : 1) {
+	$first:	'';
+	$last:	'';
+	@for $i from 0 to $depth {
+		$first: $first + ' > :first-child';
+		$last: $last + ' > :last-child';
+
+		#{$first} {
+			#{$type}-top: 0;
+		}
+
+		#{$last} {
+			#{$type}-bottom: 0;
+		}
+	}
+}
+
 /// Shorthand for element positioning.
 /// @group helpers
 /// @param {String} $type - Either absolute, fixed or relative
