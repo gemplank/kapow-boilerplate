@@ -1,0 +1,39 @@
+// Static Styleguide
+
+$static--white:				#fff;
+$static--offwhite:			#ABB2BA;
+$static--lightgrey:			#3C4049;
+$static--grey:				#323841;
+$static--offdark:			#282C35;
+$static--dark:				#21252C;
+$static--green:				#27b285;
+
+
+.static-main {
+
+	min-height: 100vh;
+	.static-page {
+		display: none;
+		opacity: 0;
+		transition: all 150ms ease;
+		&.display {
+			display: block;
+		}
+		&.active {
+			opacity: 1;
+			// Applys 150ms after display.
+		}
+	}
+
+	// Hide main site visual header and footer
+	& > * > {
+		.site-header, .site-footer {
+			display: none;
+		}
+	}
+}
+
+@import 'styleguide';
+@import 'flags';
+
+@import 'menu';

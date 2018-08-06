@@ -1,0 +1,46 @@
+// Flags
+// ---------------------------------
+
+.static-wrap {
+	@include site-wrap('normal');
+	position: relative;
+}
+
+.static-wrap-narrow {
+	@include site-wrap('narrow');
+	position: relative;
+}
+
+.static-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.static-entry {
+	position: relative;
+	padding: 80px;
+	max-width: 1000px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	& > * {
+		max-width: 1000px;
+	}
+}
+
+.static-dark {
+	background-color: $static--dark;
+}
+
+.static-offwhite {
+	background-color: $static--offwhite;
+}
+
+.static-show-overflow {
+	overflow: visible;
+}
+
+.static-custom {
+	// Add whatever the heck flag y'all want here.
+}
