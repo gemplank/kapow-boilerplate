@@ -8,22 +8,20 @@
  */
 
 ?>
-		<?php do_action( 'kapow_after_main' ); ?>
+				<?php do_action( 'kapow_after_main' ); ?>
 
-	</div>
+			</div> <!-- site-content -->
 
-	<?php get_template_part( 'template-parts/site-footer' ); ?>
+			<?php get_template_part( 'template-parts/site-footer' ); ?>
 
-	</div>
+		</div> <!-- hfeed site-container -->
 
-</div>
+		<?php
+		do_action( 'kapow_before_wp_footer' );
 
-<?php
-do_action( 'kapow_before_wp_footer' );
+		wp_footer();
+		?>
 
-wp_footer();
-?>
-
-</body>
+	</body>
 
 </html>
