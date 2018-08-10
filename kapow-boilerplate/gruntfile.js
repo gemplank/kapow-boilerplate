@@ -57,11 +57,6 @@ module.exports = function(grunt) {
 				scss_dir: 'scss',
 
 				// -------------------------------------
-				// Sass base directory.
-				// -------------------------------------
-				scss_base_dir: 'base',
-
-				// -------------------------------------
 				// Name of your main Sass file and
 				// consequent CSS file.
 				// -------------------------------------
@@ -80,34 +75,7 @@ module.exports = function(grunt) {
 				// -------------------------------------
 				// SVG assets directory
 				// -------------------------------------
-				svgs_dir: 'svgs',
-
-				// -------------------------------------
-				// Documentation path relative to the
-				// project root - NO trailing slash.
-				// -------------------------------------
-				docs_path: 'docs',
-
-				// -------------------------------------
-				// JS docs directory.
-				// -------------------------------------
-				docs_dir_js: 'js',
-
-				// -------------------------------------
-				// PHP docs directory.
-				// -------------------------------------
-				docs_dir_php: 'php',
-
-				// -------------------------------------
-				// SCSS docs directory.
-				// -------------------------------------
-				docs_dir_scss: 'scss',
-
-				// -------------------------------------
-				// Reports path relative to the project
-				// root - NO trailing slash.
-				// -------------------------------------
-				reports_path: 'reports'
+				svgs_dir: 'svgs'
 			},
 
 			// -------------------------------------
@@ -167,8 +135,7 @@ module.exports = function(grunt) {
 			// -------------------------------------
 			wpPlugins: [
 				'<%= wpInfo.wp_content %>/plugins/kapow-core/**/*.php',
-				'<%= wpInfo.wp_content %>/plugins/project-core/**/*.php',
-				// '<%= wpInfo.wp_content %>/plugins/my-plugin/**/*.php',
+				'<%= wpInfo.wp_content %>/plugins/my-project-core/**/*.php',
 			],
 
 			// -------------------------------------
@@ -184,7 +151,7 @@ module.exports = function(grunt) {
 			// included for concatenation.
 			// -------------------------------------
 			concatHead: [
-				'bower_components/picturefill/dist/picturefill.js',
+				'node_modules/picturefill/dist/picturefill.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_lib_dir %>/_*_h.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/<%= siteInfo.js_parts_dir %>/_*_h.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/header.js'
@@ -195,10 +162,10 @@ module.exports = function(grunt) {
 			// for inclusion in the HEADER for IE.
 			// -------------------------------------
 			concatHeadIE: [
-				'bower_components/es5-shim/es5-shim.js',
-				'bower_components/html5shiv/dist/html5shiv.js',
-				'bower_components/selectivizr/selectivizr.js',
-				'bower_components/respondJS/src/respond.js',
+				'node_modules/es5-shim/es5-shim.js',
+				'node_modules/html5shiv/dist/html5shiv.js',
+				'node_modules/selectivizr/selectivizr.js',
+				'node_modules/respondJS/src/respond.js',
 				'<%= siteInfo.assets_path %>/<%= siteInfo.js_dir %>/header_ie.js'
 			],
 
