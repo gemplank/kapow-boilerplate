@@ -7,6 +7,9 @@
 
 	<description>Coding standards for Kapow Boilerplate using WP Enforcer.</description>
 
+	<!-- Explicitly point to where WPCS lives in the project -->
+	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
+	
 	<!-- Excludes: Generic -->
 	<exclude-pattern>*/bower-components/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
