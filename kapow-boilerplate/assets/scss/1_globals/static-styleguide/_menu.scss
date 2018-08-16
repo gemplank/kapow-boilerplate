@@ -29,7 +29,7 @@
 // 	width: 100%;
 // 	background: $static--offdark;
 // 	border-left: 1px solid $static--offdark;
-// 	color: $static--offwhite;
+// 	color: $static--palegrey;
 // 	font-weight: $kp-font-weight--light;
 // 	letter-spacing: .15px;
 // 	margin: 0;
@@ -153,7 +153,7 @@
 // 			padding: 8px 10px 8px 30px;
 // 			margin-left: -30px;
 // 			display: block;
-// 			color: $static--offwhite;
+// 			color: $static--palegrey;
 // 			@include kp-on-event {
 // 				color: $static--white;
 // 				background-color: $static--grey;
@@ -261,7 +261,7 @@
 // 	svg {
 // 		width: kp-rem(30px);
 // 		height: kp-rem(30px);
-// 		fill: $static--offwhite;
+// 		fill: $static--palegrey;
 // 	}
 // 	@include kp-on-event {
 // 		svg {

@@ -14,7 +14,7 @@
 		// 4. Applies flag classes to a parent div around each teplate part.
 
 		// Dir to scan
-		$main_dir			= get_template_directory() . '/template-parts/static/';
+		$main_dir			= get_template_directory() . '/template-parts/';
 
 		foreach(glob( $main_dir . '*' , GLOB_ONLYDIR) as $dir) {
 			$folders[] = basename($dir);
@@ -62,32 +62,37 @@
 
 					<h3 class="static-heading"><?php echo $file_name; ?></h3>
 
-					<div class="static-label">File: </div><?php echo $folder . '/' . $file_slug; ?>
+					<div class="static-info">
+						<div class="static-info__row">
+							<div class="static-info__col">
+								<div class="static-label">File: </div><?php echo $folder . '/' . $file_slug; ?>
+							</div>
 
-					<?php // Loop lines in file, search for @flags line
-					foreach ($file_lines as $lineNumber => $line) {
-						if (strpos($line, '@flags') !== false) {
+							<?php // Loop lines in file, search for @flags line
+							foreach ($file_lines as $lineNumber => $line) {
+								if (strpos($line, '@flags') !== false) {
 
-							// Array of flag values
-							$flagline = explode( " " , $line );
+									// Array of flag values
+									$flagline = explode( " " , $line );
 
-							// Things to remove from the above
-							$removals = array(""," ", "*", "@flags");
-							$flags = array_values(array_diff($flagline, $removals));
+									// Things to remove from the above
+									$removals = array(""," ", "*", "@flags");
+									$flags = array_values(array_diff($flagline, $removals));
 
-							// Return flags
-							echo '<br><div class="static-label">Flags:</div>' . implode(" ", $flags);
+									// Return flags
+									echo '<div class="static-info__col"><div class="static-label">Flags:</div>' . implode(" ", $flags) . '</div>';
 
-							// Prefix flags to make the classes
-							$flag_classes = $flags;
-							foreach ($flag_classes as &$value) {
-								$value = 'static-'.$value;
+									// Prefix flags to make the classes
+									$flag_classes = $flags;
+									foreach ($flag_classes as &$value) {
+										$value = 'static-'.$value;
+									}
+									unset($value);
+								}
 							}
-							unset($value);
-						}
-					}
-					?>
-
+							?>
+						</div>
+					</div>
 				</div>
 
 				<div class="static-part <?php echo implode(" ", $flag_classes); ?>">

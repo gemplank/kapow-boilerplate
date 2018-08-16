@@ -1,0 +1,79 @@
+.icon-block {
+	position: relative;
+	display: block;
+}
+
+.icon-block__icon {
+	margin-bottom: kp-rem(10px);
+	display: block;
+	svg {
+		fill: $my-project--primary;
+	}
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.icon-block__content {
+	position: relative;
+	@include kp-mq(sm) {
+		padding-bottom: kp-rem($global--spacing-common);
+	}
+}
+
+.icon-block__heading {
+	@include heading('service');
+	margin: 0 0 kp-rem(10px) 0;
+
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.icon-block__text {
+	opacity: 0.85;
+	margin: 0 0 kp-rem(10px) 0;
+	p {
+		font-weight: 300;
+		margin: 0;
+		font-size: kp-rem(16px);
+		line-height: kp-rem(20px);
+	}
+	@include kp-mq(md) {
+		margin-bottom: kp-rem(15px);
+	}
+}
+
+.icon-block__more {
+	line-height: kp-rem(16px);
+	z-index: 110;
+	font-size: kp-rem(16px);
+	height: kp-rem(16px);
+	display: inline-block;
+	color: $my-project--primary;
+	text-decoration: none;
+	svg {
+		transition: all 200ms ease-in-out 0ms;
+		vertical-align: top;
+		width: kp-rem(16px);
+		height: kp-rem(16px);
+		opacity: 0.5;
+		transform: translateX(5px);
+		fill: currentColor;
+	}
+
+	@include kp-mq(sm) {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	@include kp-on-event {
+		color: $my-project--primary;
+		text-decoration: none;
+		svg {
+			opacity: 1;
+			transform: translateX(10px);
+		}
+	}
+}

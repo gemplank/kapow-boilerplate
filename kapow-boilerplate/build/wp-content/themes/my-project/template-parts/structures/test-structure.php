@@ -1,6 +1,6 @@
 <?php
 /**
- * @flags wrap dark
+ * @flags wrap
  */
  ?>
 

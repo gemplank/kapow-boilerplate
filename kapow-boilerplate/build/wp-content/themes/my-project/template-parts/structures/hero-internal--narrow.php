@@ -1,14 +1,8 @@
 <?php
 /**
- * Template part for displaying a message that posts cannot be found.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package My Project
- *
  *
  */
-?>
+ ?>
 
 <header class="hero-internal hero-internal--narrow" style="background-image: url('https://source.unsplash.com/OL5aDIJCysM/1600x900')">
 	<div class="hero-internal__overlay"></div>
