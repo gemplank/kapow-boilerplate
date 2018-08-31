@@ -108,9 +108,11 @@ function kapow_responsive_image( $img_id, $img_settings, $default_img_size = '',
 					// Try to get the retina image src.
 					$retina_img_src = wp_get_attachment_image_src( $img_id, $img_size . '_2x' );
 
+					// Carry out a check so that if the filename does not
+					// contain -123x123 we do not include the 2x image below.
 					// Add the info to the srcset array if
 					// the retina size is available.
-					if ( ! empty( $retina_img_src ) ) {
+					if ( ! empty( $retina_img_src ) && 1 === preg_match( '/-\d\d\d[x]\d\d\d/', $retina_img_src[0] ) ) {
 						$srcsets[] = array( $retina_img_src[0] . ' 2x', $img_breakpoint );
 					}
 				}
